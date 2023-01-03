@@ -1,0 +1,29 @@
+<view class="container">
+	<view class="flex flex-wrap diygw-col-24 justify-between items-center white flex8-clz">
+		<view class="flex flex-wrap diygw-col-24 flex-direction-column items-center flex2-clz">
+			<view class="diygw-col-0 text2-clz diygw-text-lg text-blue"> 嵌入式期末测验 </view>
+		</view>
+		<view class="flex flex-wrap diygw-col-24 flex-direction-column items-center flex1-clz">
+			<view class="diygw-col-14 diygw-text-lg"> 分数：88.0/100.0 </view>
+		</view>
+		<view class="flex flex-wrap diygw-col-8 flex-direction-column items-center flex-clz">
+			<view class="diygw-col-0 diygw-text-lg"> 15：23 </view>
+			<view class="diygw-col-0 diygw-text-xs"> 我的用时 </view>
+		</view>
+		<view class="flex flex-wrap diygw-col-8 flex-direction-column items-center flex3-clz">
+			<view class="diygw-col-0 diygw-text-lg"> 15 </view>
+			<view class="diygw-col-0 diygw-text-xs"> 错题数 </view>
+		</view>
+		<view class="flex flex-wrap diygw-col-8 flex-direction-column items-center flex4-clz">
+			<view class="diygw-col-0 diygw-text-lg"> 80% </view>
+			<view class="diygw-col-0 diygw-text-xs"> 正确率 </view>
+		</view>
+	</view>
+	<view class="flex diygw-col-24 justify-center button1-clz">
+		<button catchtap="navigateTo" data-type="page" data-url="/pages/examination" class="diygw-btn lines-green radius flex1 margin-md button1-button-clz">查看试卷</button>
+	</view>
+	<view class="flex diygw-col-24 justify-center button-clz">
+		<button catchtap="navigateTo" data-type="page" data-url="/pages/test" class="diygw-btn green radius flex1 margin-md button-button-clz">再来一次</button>
+	</view>
+	<view class="clearfix"></view>
+</view>

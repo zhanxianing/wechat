@@ -1,0 +1,14 @@
+<view class="flex flex-wrap diygw-col-24 flex-direction-column flex1-clz">
+<view class="flex diygw-col-24">
+	<view class="diygw-list small not-remark">
+        <view class="diygw-col-24 diygw-text-md" style="margin-top: 20px;font-size:18px;font-weight: bold;">错题记录</view>
+            <view class="timu">
+                <view class="diygw-col-6 diygw-text-md"  wx:for="{{errorquestions1}}" wx:for-item="errorquestions" wx:for-index='index'>    
+                <navigator class="timu_xuhao"  url="/pages/detail?id={{index}}">   
+                {{index+1}}
+                </navigator>
+             </view>
+        </view>
+    </view>
+</view>
+</view>

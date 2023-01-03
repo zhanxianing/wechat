@@ -1,0 +1,96 @@
+.flex-clz {
+	margin-left: 10px;
+	z-index: 100;
+	width: calc(100% - 10px - 10px) !important;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-right: 10px;
+}
+.input-clz {
+	margin-left: 20px;
+	width: calc(100% - 20px - 20px) !important;
+	font-size: 15px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-right: 20px;
+}
+.input5-clz {
+	margin-left: 20px;
+	width: calc(100% - 20px - 20px) !important;
+	font-size: 15px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-right: 20px;
+}
+.input1-clz {
+	margin-left: 20px;
+	width: calc(100% - 20px - 20px) !important;
+	font-size: 15px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-right: 20px;
+}
+.input3-clz {
+	margin-left: 20px;
+	width: calc(100% - 20px - 20px) !important;
+	font-size: 15px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-right: 20px;
+}
+.input3_clz {
+	color: rgba(24, 20, 20, 1);
+}
+.radio-clz {
+	margin-left: 20px;
+	width: calc(100% - 20px - 20px) !important;
+	font-size: 15px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-right: 20px;
+}
+.input2-clz {
+	margin-left: 20px;
+	width: calc(100% - 20px - 20px) !important;
+	font-size: 15px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-right: 20px;
+}
+.input4-clz {
+	margin-left: 20px;
+	width: calc(100% - 20px - 20px) !important;
+	font-size: 15px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-right: 20px;
+}
+.button1-clz {
+	padding-top: 0px;
+	border-bottom-left-radius: 6px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	border-top-right-radius: 6px;
+	margin-right: 100px;
+	margin-left: 100px;
+	overflow: hidden;
+	width: calc(100% - 100px - 100px) !important;
+	border-top-left-radius: 6px;
+	margin-top: 5px;
+	border-bottom-right-radius: 6px;
+	margin-bottom: 5px;
+	padding-right: 0px;
+}
+.button1-button-clz {
+	margin: 10px !important;
+}
+.container {
+	padding-left: 0px;
+	padding-right: 0px;
+	background-color: #f5f7fa;
+
+	font-size: 12px;
+}
+.container {
+	padding-bottom: 80px;
+}

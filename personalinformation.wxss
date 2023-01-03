@@ -1,0 +1,236 @@
+.flex9-clz {
+	z-index: 1000;
+}
+.flex-clz {
+	z-index: 1000;
+	background-repeat: repeat-x;
+	background-size: cover;
+	background-image: url(https://libs.diygw.com/upload/2022/04/08/fa24c64f-c60b-4303-8af1-cf46ddbec356/16493880551.jpg);
+	background-position: center center;
+	height: 120px;
+}
+.avatar1-clz {
+	margin-left: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-right: 5px;
+}
+.avatar1-badge-0 {
+	right: -6rpx !important;
+	top: -6rpx !important;
+}
+.text1-clz {
+	color: rgba(38, 15, 94, 1);
+}
+.flex8-clz {
+	padding-top: 5px;
+	border-bottom-left-radius: 6px;
+	z-index: 1000;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	border-top-right-radius: 6px;
+	margin-right: 5px;
+	margin-left: 5px;
+	box-shadow: 0px 1px 3px rgba(31, 31, 31, 0.16);
+	overflow: hidden;
+	width: calc(100% - 5px - 5px) !important;
+	border-top-left-radius: 6px;
+	margin-top: 5px;
+	border-bottom-right-radius: 6px;
+	margin-bottom: 5px;
+	padding-right: 5px;
+}
+.flex1-clz {
+	z-index: 1000;
+	border-right: 1px solid #eee;
+}
+.flex2-clz {
+	z-index: 1000;
+	border-right: 1px solid #eee;
+}
+.grid-clz {
+	padding-top: 0px;
+	border-bottom-left-radius: 20px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	border-top-right-radius: 20px;
+	margin-right: 10px;
+	background-color: rgba(255, 255, 255, 1);
+	margin-left: 10px;
+	box-shadow: 0px 1px 3px rgba(31, 31, 31, 0.16);
+	overflow: hidden;
+	width: calc(100% - 10px - 10px) !important;
+	border-top-left-radius: 20px;
+	margin-top: 10px;
+	border-bottom-right-radius: 20px;
+	margin-bottom: 10px;
+	padding-right: 0px;
+}
+.grid-item-clz {
+	font-size: 12px;
+}
+.grid-icon-clz {
+	width: 50px;
+	height: 50px;
+	font-size: calc(50px - 10px) !important;
+}
+.title-title {
+	font-size: 16px;
+}
+.title-icon {
+	color: rgba(108, 63, 63, 1);
+}
+
+.title-more {
+	font-size: 12px;
+}
+.flex3-clz {
+	margin-left: 10px;
+	border-bottom-left-radius: 6px;
+	box-shadow: 0px 1px 3px rgba(31, 31, 31, 0.16);
+	z-index: 100;
+	overflow: hidden;
+	width: calc(100% - 10px - 10px) !important;
+	border-top-left-radius: 6px;
+	margin-top: 10px;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+.flex5-clz {
+	padding-top: 8px;
+	z-index: 100;
+	padding-left: 8px;
+	padding-bottom: 8px;
+	padding-right: 8px;
+}
+.text6-clz {
+	color: rgba(115, 115, 115, 1);
+	font-size: 14px;
+}
+.text8-clz {
+	color: rgba(115, 115, 115, 1);
+	flex: 1;
+	font-size: 14px;
+}
+.flex7-clz {
+	padding-top: 8px;
+	z-index: 100;
+	padding-left: 8px;
+	padding-bottom: 8px;
+	padding-right: 8px;
+}
+.text9-clz {
+	color: rgba(115, 115, 115, 1);
+	font-size: 14px;
+}
+.text11-clz {
+	color: rgba(115, 115, 115, 1);
+	flex: 1;
+	font-size: 14px;
+}
+.flex11-clz {
+	padding-top: 8px;
+	z-index: 100;
+	padding-left: 8px;
+	padding-bottom: 8px;
+	padding-right: 8px;
+}
+.text14-clz {
+	color: rgba(115, 115, 115, 1);
+	font-size: 14px;
+}
+.text16-clz {
+	color: rgba(115, 115, 115, 1);
+	flex: 1;
+	font-size: 14px;
+}
+.flex13-clz {
+	padding-top: 8px;
+	z-index: 100;
+	padding-left: 8px;
+	padding-bottom: 8px;
+	padding-right: 8px;
+}
+.text18-clz {
+	color: rgba(115, 115, 115, 1);
+	font-size: 14px;
+}
+.text20-clz {
+	color: rgba(115, 115, 115, 1);
+	flex: 1;
+	font-size: 14px;
+}
+.flex15-clz {
+	padding-top: 8px;
+	z-index: 100;
+	padding-left: 8px;
+	padding-bottom: 8px;
+	padding-right: 8px;
+}
+.text22-clz {
+	color: rgba(115, 115, 115, 1);
+	font-size: 14px;
+}
+.text24-clz {
+	color: rgba(115, 115, 115, 1);
+	flex: 1;
+	font-size: 14px;
+}
+.flex17-clz {
+	padding-top: 8px;
+	z-index: 100;
+	padding-left: 8px;
+	padding-bottom: 8px;
+	padding-right: 8px;
+}
+.text26-clz {
+	color: rgba(115, 115, 115, 1);
+	font-size: 14px;
+}
+.text28-clz {
+	color: rgba(115, 115, 115, 1);
+	flex: 1;
+	font-size: 14px;
+}
+.flex19-clz {
+	padding-top: 8px;
+	z-index: 100;
+	padding-left: 8px;
+	padding-bottom: 8px;
+	padding-right: 8px;
+}
+.text30-clz {
+	color: rgba(115, 115, 115, 1);
+	font-size: 14px;
+}
+.text32-clz {
+	color: rgba(115, 115, 115, 1);
+	flex: 1;
+	font-size: 14px;
+}
+.flex21-clz {
+	padding-top: 8px;
+	z-index: 100;
+	padding-left: 8px;
+	padding-bottom: 8px;
+	padding-right: 8px;
+}
+.text34-clz {
+	color: rgba(115, 115, 115, 1);
+	font-size: 14px;
+}
+.text36-clz {
+	color: rgba(115, 115, 115, 1);
+	flex: 1;
+	font-size: 14px;
+}
+.container {
+	padding-left: 0px;
+	padding-right: 0px;
+	background-color: #f5f7fa;
+}
+.container {
+	padding-bottom: 80px;
+}

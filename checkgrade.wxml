@@ -1,0 +1,43 @@
+<view class="container">
+	<view class="diygw-title flex diygw-col-24 white">
+		<view class="title font-normal"> <text class="diy-icon-home"></text> 当前考试 </view>
+		<view class="more"> </view>
+	</view>
+	<view class="flex flex-wrap diygw-col-24 flex15-clz" wx:for="{{gradelist1}}" wx:for-item="gradelist1">
+		<image src="/static/lwg0qgq_u37p9ycmpp.png" class="diygw-image diygw-col-0 image-clz" style="height: 80px; width: 80px" mode="aspectFit"></image>
+		<view class="flex flex-wrap diygw-col-0 flex-direction-column flex1-clz">
+			<view class="flex flex-wrap diygw-col-24 flex-direction-column justify-between flex2-clz">
+				<view class="diygw-col-24 diygw-text-md">{{gradelist1.name}}</view>
+			</view>
+            <view class="flex flex-wrap diygw-col-24 justify-start items-center flex3-clz">
+				<view class="diygw-col-1 text5-clz diygw-text-md text-olive">{{gradelist1.getgrade}}/{{gradelist1.grade}}</view>
+				<view class="diygw-col-7 text-clz diygw-text-md text-red" bindtap='checkexamtest' data-ei_id="{{gradelist1.id}}" data-ei_exam="{{gradelist1.exam_id}}"  data-ei_method="{{gradelist1.method}}" data-ei_count="{{gradelist1.count}}"> 点击查看 </view>
+				<view class="diygw-col-7 text1-clz diygw-text-md text-blue" bindtap='checkclass'> 查看分析 </view>
+			</view>
+			<view class="flex flex-wrap diygw-col-24 flex4-clz">
+				<view class="diygw-col-0 text7-clz"> {{gradelist1.endtime}}提交 </view>
+			</view>
+		</view>
+	</view>
+	<view class="flex diygw-col-24 diygw-bottom">
+		<view class="diygw-grid diygw-actions">
+			<button catchtap="navigateTo" data-type="page" data-url="/pages/index" class="diygw-action">
+				<view class="diygw-grid-inner">
+					<view class="diygw-grid-icon diygw-avatar">
+						<image mode="aspectFit" class="diygw-avatar-img" src="/static/sy-blue.png"></image>
+					</view>
+					<view class="diygw-grid-title"> 首页 </view>
+				</view>
+			</button>
+			<button catchtap="navigateTo" data-type="page" data-url="/pages/personalinformation" class="diygw-action">
+				<view class="diygw-grid-inner">
+					<view class="diygw-grid-icon diygw-avatar">
+						<image mode="aspectFit" class="diygw-avatar-img" src="/static/grxx_o.png"></image>
+					</view>
+					<view class="diygw-grid-title"> 个人消息 </view>
+				</view>
+			</button>
+		</view>
+	</view>
+	<view class="clearfix"></view>
+</view>

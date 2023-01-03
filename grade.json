@@ -1,0 +1,10 @@
+{
+	"navigationBarTitleText": "知识点掌握",
+	"navigationBarBackgroundColor": "#23BEB9",
+	"usingComponents": {
+		"diy-dropdown": "/components/diy-dropdown/diy-dropdown",
+        "diy-dropdown-item": "/components/diy-dropdown-item/diy-dropdown-item",
+        "ec-canvas": "/components/ec-canvas/ec-canvas"   
+    }
+
+}

@@ -1,0 +1,34 @@
+<view class="container">
+	<diy-navbar bgColor="cyan" isHome="{{true}}" isBack="{{true}}">
+		<view slot="backText"> 返回 </view>
+		<view slot="content"> 登录 </view>
+	</diy-navbar>
+	<view class="flex diygw-col-24 flex-direction-column justify-center items-center flex-nowrap flex-clz">
+		<view class="flex diygw-col-0 avatar-clz">
+			<view class="diygw-avatar lg radius diygw-shadow bg-none">
+				<image mode="aspectFit" class="diygw-avatar-img radius" src="/static/oimdxsyirus1yyo8a76f.png"></image>
+			</view>
+		</view>
+	</view>
+	<view class="diygw-col-24 logintitle-clz diygw-text-lg text-purple"> 在线考试系统学生端 </view>
+	<view class="diygw-form-item diygw-form-item-small diygw-col-24 username-clz">
+		<view class="input">
+			<text class="diy-icon-my" style="color: #304ffe"></text>
+			<input class="flex1" bindinput="s_account" name="username" comfirm-type="done" type="text" value="{{username}}" data-key="username" bindchange="changeValue" placeholder="请输入用户名" />
+		</view>
+	</view>
+	<view class="diygw-form-item diygw-form-item-small diygw-col-24 password-clz">
+		<view class="input">
+			<text class="diy-icon-tagfill" style="color: #304ffe"></text>
+			<input class="flex1" bindinput="s_password" name="password" comfirm-type="done" type="password" value="{{password}}" data-key="password" bindchange="changeValue" placeholder="请输入密码" />
+		</view>
+	</view>
+	<view class="flex diygw-col-24 button-clz">
+		<button bindtap="submitButton"  data-type="page"  class="diygw-btn gradual-purple md radius flex1 margin-xs">点击登录</button>
+	</view>
+	<view class="flex flex-wrap diygw-col-24 justify-between flex1-clz">
+		<view class="diygw-col-0 text-clz text-purple"> </view>
+		<view class="diygw-col-0 text1-clz text-purple"> 忘记密码 </view>
+	</view>
+	<view class="clearfix"></view>
+</view>

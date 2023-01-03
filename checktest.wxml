@@ -1,0 +1,92 @@
+<view class="container">
+	<view catchtap="navigateTo" data-type="page" data-url="/pages/index" class="diygw-title flex diygw-col-24 white solid-bottom">
+		<view class="title font-bold"> <text class="diy-icon-writefill"></text> 历史考试 </view>
+	</view>
+	<view class="flex flex-wrap diygw-col-24 flex4-clz" wx:for="{{examlist}}" wx:for-item="examlist" wx:if="{{examlist.temp==1}}"> 
+		<image src="/static/lwg0qgq_u37p9ycmpp.png" class="diygw-image diygw-col-0 image2-clz" style="height: 80px; width: 80px" mode="aspectFit"></image>
+		<view class="flex flex-wrap diygw-col-0 flex-direction-column flex6-clz">
+			<view class="flex flex-wrap diygw-col-24 flex-direction-column justify-between flex8-clz">
+				<view class="diygw-col-24 diygw-text-md"> {{examlist.name}} </view>
+			</view>
+			<!--<view class="flex flex-wrap diygw-col-24 justify-start items-center flex10-clz">
+				<view class="diygw-col-8"> {{examlist.single*examlist.singlegrade+examlist.multiple*examlist.multiplegrade+examlist.blankfilling*examlist.blankfillinggrade+examlist.judge*examlist.judgegrade+examlist.shortquestion*examlist.shortquestiongrade}} 分 </view>
+				<view class="diygw-col-0 text10-clz diygw-text-md text-red"> </view>
+				<view class="flex diygw-col-11 flex-direction-column button1-clz">
+					<button style="color: rgba(251, 247, 247, 1) !important"  data-e_id="{{examlist.id}}" data-type="page" bindtap="test" class="diygw-btn blue flex1 margin-xs button1-button-clz">点击开始测验</button>
+                    <button style="color: rgba(251, 247, 247, 1) !important"  data-e_id="{{examlist.id}}" data-type="page" bindtap="" class="diygw-btn blue flex1 margin-xs button1-button-clz">查看排名</button>
+                </view>
+			</view>-->
+            <view class="flex flex-wrap diygw-col-24 justify-start items-center flex10-clz">
+				<view class="diygw-col-4"> {{examlist.single*examlist.singlegrade+examlist.multiple*examlist.multiplegrade+examlist.blankfilling*examlist.blankfillinggrade+examlist.judge*examlist.judgegrade+examlist.shortquestion*examlist.shortquestiongrade}} 分 </view>
+				<view class="flex diygw-col-10">
+					<button style="color: rgba(251, 247, 247, 1) !important"  data-e_id="{{examlist.id}}"  data-e_method="{{examlist.method}}"  data-type="page" bindtap="test" class="diygw-btn blue flex1 margin-xs button1-button-clz">开始测验</button>
+				</view>
+				<view class="flex diygw-col-10">
+					<button class="diygw-btn green md flex1 margin-xs button1-button-clz" data-e_id="{{examlist.id}}" data-e_method="{{examlist.method}}" data-type="page" bindtap="rank">查看排名</button>
+				</view>
+			</view>
+			<view class="flex flex-wrap diygw-col-24 flex13-clz">
+				<view class="diygw-col-0 text13-clz"> {{examlist.time}}分钟 </view>
+				<view class="diygw-col-0 text15-clz"> 可测验 </view>
+				<view class="diygw-col-0 text17-clz"> {{examlist.endtime}}截止 </view>
+			</view>
+		</view>
+	</view>
+	<view class="flex flex-wrap diygw-col-24 flex4-clz" wx:for="{{examlist}}" wx:for-item="examlist" wx:if="{{examlist.temp==0}}"> 
+		<image src="/static/lwg0qgq_u37p9ycmpp.png" class="diygw-image diygw-col-0 image2-clz" style="height: 80px; width: 80px" mode="aspectFit"></image>
+		<view class="flex flex-wrap diygw-col-0 flex-direction-column flex6-clz">
+			<view class="flex flex-wrap diygw-col-24 flex-direction-column justify-between flex8-clz">
+				<view class="diygw-col-24 diygw-text-md"> {{examlist.name}} </view>
+			</view>
+			<!--<view class="flex flex-wrap diygw-col-24 justify-start items-center flex10-clz">
+				<view class="diygw-col-5"> {{examlist.single*examlist.singlegrade+examlist.multiple*examlist.multiplegrade+examlist.blankfilling*examlist.blankfillinggrade+examlist.judge*examlist.judgegrade+examlist.shortquestion*examlist.shortquestiongrade}} 分 </view>
+				<view class="diygw-col-0 text10-clz diygw-text-md text-red"> </view>
+				<view class="flex diygw-col-11 flex-direction-column button1-clz">
+					<button style="color: rgb(236, 37, 37) !important"  data-e_id="{{examlist.id}}" data-type="page" bindtap="" class="diygw-btn blue flex1 margin-xs button1-button-clz">已截止</button>
+                    <button style="color: rgba(251, 247, 247, 1) !important"  data-e_id="{{examlist.id}}" data-type="page" bindtap="" class="diygw-btn blue flex1 margin-xs button1-button-clz">查看排名</button>
+                </view>
+                <view class="flex diygw-col-10">
+					<button class="diygw-btn red md flex1 margin-xs button-button-clz">已截止</button>
+				</view>
+				<view class="flex diygw-col-10">
+					<button style="color: rgba(251, 247, 247, 1) !important" class="diygw-btn green md flex1 margin-xs button1-button-clz">查看排名</button>
+				</view>
+			</view>-->
+            <view class="flex flex-wrap diygw-col-24 justify-start items-center flex10-clz">
+				<view class="diygw-col-4"> {{examlist.single*examlist.singlegrade+examlist.multiple*examlist.multiplegrade+examlist.blankfilling*examlist.blankfillinggrade+examlist.judge*examlist.judgegrade+examlist.shortquestion*examlist.shortquestiongrade}} 分 </view>
+				<view class="flex diygw-col-10">
+					<button class="diygw-btn red md flex1 margin-xs button-button-clz">已截止</button>
+				</view>
+				<view class="flex diygw-col-10">
+					<button class="diygw-btn green md flex1 margin-xs button1-button-clz" data-e_id="{{examlist.id}}" data-e_method="{{examlist.method}}" data-type="page" bindtap="rank">查看排名</button>
+				</view>
+			</view>
+			<view class="flex flex-wrap diygw-col-24 flex13-clz">
+				<view class="diygw-col-0 text13-clz"> {{examlist.time}}分钟 </view>
+				<view class="diygw-col-0 text15-clz"> 不可测验 </view>
+				<view class="diygw-col-0 text17-clz"> {{examlist.endtime}}截止 </view>
+			</view>
+		</view>
+	</view>    
+	<view class="flex diygw-col-24 diygw-bottom">
+		<view class="diygw-grid diygw-actions">
+			<button catchtap="navigateTo" data-type="page" data-url="/pages/index" class="diygw-action">
+				<view class="diygw-grid-inner">
+					<view class="diygw-grid-icon diygw-avatar">
+						<image mode="aspectFit" class="diygw-avatar-img" src="/static/sy-blue.png"></image>
+					</view>
+					<view class="diygw-grid-title"> 首页 </view>
+				</view>
+			</button>
+			<button catchtap="navigateTo" data-type="page" data-url="/pages/personalinformation" class="diygw-action">
+				<view class="diygw-grid-inner">
+					<view class="diygw-grid-icon diygw-avatar">
+						<image mode="aspectFit" class="diygw-avatar-img" src="/static/grxx_o.png"></image>
+					</view>
+					<view class="diygw-grid-title"> 个人消息 </view>
+				</view>
+			</button>
+		</view>
+	</view>
+	<view class="clearfix"></view>
+</view>

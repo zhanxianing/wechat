@@ -1,0 +1,57 @@
+<view class="container">
+	<view class="flex flex-wrap diygw-col-24 justify-between items-center white flex8-clz">
+		<view class="flex flex-wrap diygw-col-12 flex-direction-column items-center flex3-clz">
+			<view class="diygw-col-0 diygw-text-md"> 倒计时 59：59：58 </view>
+			<view class="diygw-col-0 diygw-text-lg"> </view>
+		</view>
+		<view class="flex flex-wrap diygw-col-12 flex-direction-column items-center flex5-clz">
+			<view catchtap="navigateTo" data-type="page" data-url="/pages/answer" class="diygw-col-0 diygw-text-md"> 答题卡 </view>
+			<view class="diygw-col-0 diygw-text-lg"> </view>
+		</view>
+	</view>
+	<view class="flex flex-wrap diygw-col-24 flex-direction-column flex-clz">
+		<view class="diygw-form-item diygw-col-24 white radio1-clz flex-direction-column">
+			<view class="title title-mb5 width-auto diygw-col-24"> 1.设二叉树的先序遍历序列和后序遍历序列正好相反，则该二叉树满足的条件是（ ）。 </view>
+			<view class="input">
+				<radio-group class="flex flex-wrap check-green diygw-col-24 justify-around" bindchange="changeRadio1" name="radio1">
+					<label wx:for="{{radio1Datas}}" wx:for-item="item" wx:for-index="index" data-key="index" class="diygw-radio-label">
+						<radio class="diygw-radio" value="{{item.value}}" checked="{{item.checked}}"> </radio>
+						<view class="diygw-icon-radio {{item.checked?'checked':''}}"></view>
+						<view class="diygw-checkbox-text"> {{ item.label }} </view>
+					</label>
+				</radio-group>
+				<input hidden type="hidden" name="radio1Label" value="{{radio1Label}}" />
+			</view>
+		</view>
+	</view>
+	<view class="flex flex-wrap diygw-col-24 flex-direction-column flex1-clz">
+		<view class="diygw-form-item diygw-col-24 input1-clz">
+			<view class="title"> 学生答案 </view>
+			<view class="input">
+				<input class="flex1" name="input1" comfirm-type="done" type="text" value="{{input1}}" data-key="input1" bindchange="changeValue" placeholder="B" />
+			</view>
+		</view>
+		<view class="diygw-form-item diygw-col-24 input-clz">
+			<view class="title"> 正确答案 </view>
+			<view class="input">
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="{{input}}" data-key="input" bindchange="changeValue" placeholder="B" />
+			</view>
+		</view>
+		<view class="diygw-form-item diygw-col-24 textarea-clz flex-direction-column noborder">
+			<view class="title diygw-col-24"> 解析 </view>
+			<view class="input">
+				<textarea class="flex1" name="textarea" value="{{textarea}}" data-key="textarea" bindchange="changeValue" placeholder="前序序列是“根左右”,后序序列是“左右根”,若要这两个序列相反,只有单支树, 所以本题的 A 和 B 均对,单支树的特点是只有一个叶子结点,故 C 是最合适的,选 C。"></textarea>
+			</view>
+		</view>
+	</view>
+	<view class="flex diygw-col-12">
+		<button class="diygw-btn line-green flex1 margin-xs button-button-clz">上一题</button>
+	</view>
+	<view class="flex diygw-col-12">
+		<button class="diygw-btn green flex1 margin-xs button1-button-clz">下一题</button>
+	</view>
+	<view class="flex diygw-col-24 button2-clz">
+		<button catchtap="navigateTo" data-type="page" data-url="/pages/index" class="diygw-btn green flex1 margin-xs button2-button-clz">返回首页</button>
+	</view>
+	<view class="clearfix"></view>
+</view>

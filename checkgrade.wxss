@@ -1,0 +1,83 @@
+.flex15-clz {
+	background-color: rgba(255, 255, 255, 1);
+	margin-left: 10px;
+	padding-top: 5px;
+	z-index: 1000;
+	padding-left: 5px;
+	width: calc(100% - 10px - 10px) !important;
+	padding-bottom: 5px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #eee;
+	margin-right: 10px;
+	padding-right: 5px;
+}
+.image-clz {
+	margin-left: 5px;
+	border-bottom-left-radius: 6px;
+	box-shadow: 0px 0px 2px 1px rgba(31, 31, 31, 0.16);
+	overflow: hidden;
+	border-top-left-radius: 6px;
+	margin-top: 5px;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+	margin-bottom: 5px;
+	margin-right: 5px;
+}
+.flex1-clz {
+	margin-left: 5px;
+	z-index: 1000;
+	flex: 1;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-right: 5px;
+}
+.flex2-clz {
+	z-index: 1000;
+}
+.flex3-clz {
+	z-index: 1000;
+	flex: 1;
+}
+.text5-clz {
+	margin-left: 5px;
+	width: calc(37.5% - 5px - 0px) !important;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-right: 0px;
+}
+.text-clz {
+	margin-left: 5px;
+	width: calc(29.1666666667% - 5px - 0px) !important;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-right: 0px;
+}
+.text1-clz {
+	margin-left: 5px;
+	width: calc(29.1666666667% - 5px - 0px) !important;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-right: 0px;
+}
+.flex4-clz {
+	z-index: 1000;
+}
+.text7-clz {
+	padding-top: 0px;
+	padding-left: 10px;
+	padding-bottom: 0px;
+	padding-right: 10px;
+}
+.container {
+	padding-left: 0px;
+	padding-right: 0px;
+	background-color: #f5f7fa;
+
+	background-size: cover;
+
+	font-size: 12px;
+}
+.container {
+	padding-bottom: 80px;
+}

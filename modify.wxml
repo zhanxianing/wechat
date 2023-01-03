@@ -1,0 +1,87 @@
+<view class="container">
+	<view class="diygw-title flex diygw-col-24 white">
+		<view class="title font-normal"> <text class="diy-icon-post"></text> 个人信息修改 </view>
+		<view class="more"> </view>
+	</view>
+	<view class="flex diygw-col-24">
+		<view class="diygw-pzx" style="border-bottom: 1px solid #eee"></view>
+	</view>
+	<view class="flex flex-wrap diygw-col-24 flex-direction-column white flex-clz">
+		<view class="diygw-form-item diygw-col-24 input-clz">
+			<view class="title"> 姓名 </view>
+			<view class="input">
+				<input class="flex1" name="s_username" comfirm-type="done" type="text" value="{{s_username}}" data-key="input" bindchange="changeValue" placeholder="佘屹原" />
+			</view>
+		</view>
+		<view class="diygw-form-item diygw-col-24 input5-clz">
+			<view class="title"> 班级 </view>
+			<view class="input">
+				<input class="flex1" name="s_class1" comfirm-type="done" type="text" value="{{s_class1}}" data-key="input5" bindchange="changeValue" placeholder="计科1803班" />
+			</view>
+		</view>
+		<view class="diygw-form-item diygw-col-24 input1-clz">
+			<view class="title"> 学历 </view>
+			<view class="input">
+				<input class="flex1" name="s_background" comfirm-type="done" type="text" value="{{s_background}}" data-key="input1" bindchange="changeValue" />
+			</view>
+		</view>
+		<view class="diygw-form-item diygw-col-24 input3-clz">
+			<view class="title"> 学号 </view>
+			<view class="input input3_clz">
+				<input class="flex1" name="s_account" comfirm-type="done" type="text" value="{{s_account}}" disabled="true" data-key="input3" bindchange="changeValue"  />
+			</view>
+		</view>
+		<view class="diygw-form-item diygw-col-24 radio-clz">
+			<view class="title title-mb5"> 性别 </view>
+			<view class="input">
+				<radio-group class="flex flex-wrap check-green diygw-col-24 justify-between" name="s_sex">
+					<label data-key="index" class="diygw-radio-label">
+						<radio value="男"/>男
+					</label>
+                    <label data-key="index" class="diygw-radio-label">
+                        <radio value="女"/>女
+                    </label>
+				</radio-group>
+			</view>
+		</view>
+		<view class="diygw-form-item diygw-col-24 input2-clz">
+			<view class="title"> 地址 </view>
+			<view class="input">
+				<input class="flex1" name="s_location" comfirm-type="done" type="text" value="{{s_location}}" data-key="input2" bindchange="changeValue" placeholder="计算机科学与技术" />
+			</view>
+		</view>
+		<view class="diygw-form-item diygw-col-24 input4-clz">
+			<view class="title"> 联系电话 </view>
+			<view class="input">
+				<input class="flex1" name="s_telephone" comfirm-type="done" type="text" value="{{s_telephone}}" data-key="input4" bindchange="changeValue" placeholder="佘屹原" />
+			</view>
+		</view>
+	</view>
+	<view class="flex diygw-col-24 justify-center button1-clz">
+		<button class="diygw-btn green radius flex1 margin-md button1-button-clz" bindtap="submitButton">提交</button>
+	</view>
+	<view class="flex diygw-col-24 justify-center button1-clz">
+		<button class="diygw-btn green radius flex1 margin-md button1-button-clz" catchtap="navigateTo" data-type="page" data-url="/pages/createcamera">人脸录入</button>
+	</view>   
+	<view class="flex diygw-col-24 diygw-bottom">
+		<view class="diygw-grid diygw-actions">
+			<button catchtap="navigateTo" data-type="page" data-url="/pages/index" class="diygw-action">
+				<view class="diygw-grid-inner">
+					<view class="diygw-grid-icon diygw-avatar">
+						<image mode="aspectFit" class="diygw-avatar-img" src="/static/sy-blue.png"></image>
+					</view>
+					<view class="diygw-grid-title"> 首页 </view>
+				</view>
+			</button>
+			<button catchtap="navigateTo" data-type="page" data-url="/pages/personalinformation" class="diygw-action">
+				<view class="diygw-grid-inner">
+					<view class="diygw-grid-icon diygw-avatar">
+						<image mode="aspectFit" class="diygw-avatar-img" src="/static/grxx_o.png"></image>
+					</view>
+					<view class="diygw-grid-title"> 个人消息 </view>
+				</view>
+			</button>
+		</view>
+	</view>
+	<view class="clearfix"></view>
+</view>

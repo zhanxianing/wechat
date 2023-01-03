@@ -1,0 +1,14 @@
+<view class="container">
+	<view class="flex flex-wrap diygw-col-24 flex-direction-column gray flex1-clz">
+		<view class="diygw-title flex diygw-col-24 title-clz">
+			<view class="title font-normal"> <text class="diy-icon-home"></text> 考前通知 </view>
+		</view>
+		<view class="diygw-col-24 text1-clz">
+			{{exam.remark}} 
+        </view>
+	</view>
+	<view class="flex diygw-col-24 justify-center button1-clz">
+		<button bindtap="goredirectTo" class="diygw-btn green radius flex1 margin-md button1-button-clz">我已阅读，点击考试</button>
+	</view>
+	<view class="clearfix"></view>
+</view>

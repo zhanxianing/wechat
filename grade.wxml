@@ -1,0 +1,15 @@
+<view class="container">
+	<view class="diygw-title flex diygw-col-24 white">
+		<view class="title font-normal"> <text class="diy-icon-home"></text> 知识点掌握情况图 </view>
+		<view class="more"> </view>
+	</view>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{allclass}}" range-key='subject'>
+    <view class="picker">
+      当前选择：{{allclass[index].subject}}
+    </view>
+  </picker>
+
+ 
+    <ec-canvas id="mychart-dom-graph" canvas-id="mychart-graph" ec="{{ ec }}"></ec-canvas>
+ 
+</view>

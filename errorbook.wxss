@@ -1,0 +1,101 @@
+.timu{
+    display: flex; 
+    width:100%;
+    flex-wrap: wrap;
+    font-size: 14px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.timu_xuhao{
+	width: 100%;
+	padding: 5px;
+	box-sizing: border-box;
+	font-size: 16px;
+	text-align: center;
+	background-color:#f2f2f2;
+	border-radius: 20px;
+	border:5px solid white;
+}
+.timu_yida{
+	background-color: green; 
+	color: white;
+}
+.diygw-text-sm1{
+	color: green;
+}
+
+.flex8-clz {
+	padding-top: 5px;
+	border-bottom-left-radius: 6px;
+	z-index: 1000;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	border-top-right-radius: 6px;
+	margin-right: 5px;
+	margin-left: 5px;
+	box-shadow: 0px 1px 3px rgba(31, 31, 31, 0.16);
+	overflow: hidden;
+	width: calc(100% - 5px - 5px) !important;
+	border-top-left-radius: 6px;
+	margin-top: 5px;
+	border-bottom-right-radius: 6px;
+	margin-bottom: 5px;
+	padding-right: 5px;
+}
+.flex-clz {
+	z-index: 1000;
+	border-right: 1px solid #eee;
+}
+.flex2-clz {
+	z-index: 1000;
+	border-right: 1px solid #eee;
+	font-size: 20px;
+}
+.flex1-clz {
+	padding-top: 16px;
+	border-bottom-left-radius: 20px;
+	z-index: 100;
+	padding-left: 16px;
+	padding-bottom: 16px;
+	border-top-right-radius: 20px;
+	margin-right: 10px;
+	background-color: rgba(255, 255, 255, 1);
+	margin-left: 10px;
+	box-shadow: 0px 1px 3px rgba(31, 31, 31, 0.16);
+	overflow: hidden;
+	width: calc(100% - 10px - 10px) !important;
+	border-top-left-radius: 20px;
+	margin-top: 10px;
+	border-bottom-right-radius: 20px;
+	margin-bottom: 10px;
+	padding-right: 16px;
+}
+.flex4-clz {
+	z-index: 100;
+}
+.button1-clz {
+	padding-top: 0px;
+	border-bottom-left-radius: 6px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	border-top-right-radius: 6px;
+	margin-right: 100px;
+	margin-left: 100px;
+	overflow: hidden;
+	width: calc(100% - 100px - 100px) !important;
+	border-top-left-radius: 6px;
+	margin-top: 5px;
+	border-bottom-right-radius: 6px;
+	margin-bottom: 5px;
+	padding-right: 0px;
+}
+.button1-button-clz {
+	margin: 10px !important;
+}
+.container {
+	padding-left: 0px;
+	padding-right: 0px;
+	background-color: #f5f7fa;
+
+	font-size: 12px;
+}

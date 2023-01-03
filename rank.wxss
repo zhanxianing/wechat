@@ -1,0 +1,243 @@
+.flex3-clz {
+	padding-top: 5px;
+	border-bottom-left-radius: 6px;
+	z-index: 1000;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	border-top-right-radius: 6px;
+	margin-right: 5px;
+	margin-left: 5px;
+	box-shadow: 0px 1px 3px rgba(31, 31, 31, 0.16);
+	overflow: hidden;
+	width: calc(100% - 5px - 5px) !important;
+	border-top-left-radius: 6px;
+	margin-top: 5px;
+	border-bottom-right-radius: 6px;
+	margin-bottom: 5px;
+	padding-right: 5px;
+}
+.flex7-clz {
+	z-index: 1000;
+	border-right: 1px solid #eee;
+}
+.flex9-clz {
+	z-index: 1000;
+	border-right: 1px solid #eee;
+}
+.flex11-clz {
+	z-index: 1000;
+}
+.flex1-clz {
+	margin-left: 5px;
+	z-index: 1000;
+	width: calc(100% - 5px - 5px) !important;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-right: 5px;
+}
+.flex2-clz {
+	z-index: 1000;
+}
+.text1-clz {
+	padding-top: 8px;
+	border-bottom-left-radius: 0px;
+	overflow: hidden;
+	flex: 1;
+	padding-left: 8px;
+	padding-bottom: 8px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 0px;
+	text-align: center;
+	padding-right: 8px;
+}
+.text2-clz {
+	padding-top: 8px;
+	border-bottom-left-radius: 0px;
+	overflow: hidden;
+	flex: 1;
+	padding-left: 8px;
+	padding-bottom: 8px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 0px;
+	text-align: center;
+	padding-right: 8px;
+}
+.text5-clz {
+	padding-top: 8px;
+	border-bottom-left-radius: 0px;
+	overflow: hidden;
+	flex: 1;
+	padding-left: 8px;
+	padding-bottom: 8px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 0px;
+	text-align: center;
+	padding-right: 8px;
+}
+.text7-clz {
+	padding-top: 8px;
+	border-bottom-left-radius: 0px;
+	overflow: hidden;
+	flex: 1;
+	padding-left: 8px;
+	padding-bottom: 8px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 0px;
+	text-align: center;
+	padding-right: 8px;
+}
+.flex4-clz {
+	z-index: 1000;
+}
+.text9-clz {
+	padding-top: 8px;
+	flex: 1;
+	padding-left: 0px;
+	padding-bottom: 8px;
+	text-align: center;
+	padding-right: 0px;
+}
+.text11-clz {
+	padding-top: 8px;
+	flex: 1;
+	padding-left: 0px;
+	padding-bottom: 8px;
+	text-align: center;
+	padding-right: 0px;
+}
+.text12-clz {
+	padding-top: 8px;
+	flex: 1;
+	padding-left: 0px;
+	padding-bottom: 8px;
+	text-align: center;
+	padding-right: 0px;
+}
+.text14-clz {
+	padding-top: 8px;
+	flex: 1;
+	padding-left: 0px;
+	padding-bottom: 8px;
+	text-align: center;
+	padding-right: 0px;
+}
+.flex6-clz {
+	background-color: rgba(220, 220, 220, 0.68);
+	z-index: 1000;
+}
+.text17-clz {
+	padding-top: 8px;
+	flex: 1;
+	padding-left: 0px;
+	padding-bottom: 8px;
+	text-align: center;
+	padding-right: 0px;
+}
+.text18-clz {
+	padding-top: 8px;
+	flex: 1;
+	padding-left: 0px;
+	padding-bottom: 8px;
+	text-align: center;
+	padding-right: 0px;
+}
+.text19-clz {
+	padding-top: 8px;
+	flex: 1;
+	padding-left: 0px;
+	padding-bottom: 8px;
+	text-align: center;
+	padding-right: 0px;
+}
+.text20-clz {
+	padding-top: 8px;
+	flex: 1;
+	padding-left: 0px;
+	padding-bottom: 8px;
+	text-align: center;
+	padding-right: 0px;
+}
+.flex8-clz {
+	z-index: 1000;
+}
+.text23-clz {
+	padding-top: 8px;
+	flex: 1;
+	padding-left: 0px;
+	padding-bottom: 8px;
+	text-align: center;
+	padding-right: 0px;
+}
+.text24-clz {
+	padding-top: 8px;
+	flex: 1;
+	padding-left: 0px;
+	padding-bottom: 8px;
+	text-align: center;
+	padding-right: 0px;
+}
+.text28-clz {
+	padding-top: 8px;
+	flex: 1;
+	padding-left: 0px;
+	padding-bottom: 8px;
+	text-align: center;
+	padding-right: 0px;
+}
+.text30-clz {
+	padding-top: 8px;
+	flex: 1;
+	padding-left: 0px;
+	padding-bottom: 8px;
+	text-align: center;
+	padding-right: 0px;
+}
+.flex10-clz {
+	background-color: rgba(220, 220, 220, 0.68);
+	z-index: 1000;
+}
+.text33-clz {
+	padding-top: 8px;
+	flex: 1;
+	padding-left: 0px;
+	padding-bottom: 8px;
+	text-align: center;
+	padding-right: 0px;
+}
+.text35-clz {
+	padding-top: 8px;
+	flex: 1;
+	padding-left: 0px;
+	padding-bottom: 8px;
+	text-align: center;
+	padding-right: 0px;
+}
+.text37-clz {
+	padding-top: 8px;
+	flex: 1;
+	padding-left: 0px;
+	padding-bottom: 8px;
+	text-align: center;
+	padding-right: 0px;
+}
+.text39-clz {
+	padding-top: 8px;
+	flex: 1;
+	padding-left: 0px;
+	padding-bottom: 8px;
+	text-align: center;
+	padding-right: 0px;
+}
+.container {
+	padding-left: 0px;
+	padding-right: 0px;
+
+	font-size: 12px;
+}
+.container {
+	padding-bottom: 80px;
+}

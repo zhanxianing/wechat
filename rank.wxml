@@ -1,0 +1,60 @@
+<view class="container">
+	<view class="flex diygw-col-24 diygw-bottom">
+		<view class="diygw-grid diygw-actions">
+			<button catchtap="navigateTo" data-type="page" data-url="/pages/index" class="diygw-action">
+				<view class="diygw-grid-inner">
+					<view class="diygw-grid-icon diygw-avatar">
+						<image mode="aspectFit" class="diygw-avatar-img" src="/static/sy-blue.png"></image>
+					</view>
+					<view class="diygw-grid-title"> 首页 </view>
+				</view>
+			</button>
+			<button catchtap="navigateTo" data-type="page" data-url="/pages/personalinformation" class="diygw-action">
+				<view class="diygw-grid-inner">
+					<view class="diygw-grid-icon diygw-avatar">
+						<image mode="aspectFit" class="diygw-avatar-img" src="/static/grxx_o.png"></image>
+					</view>
+					<view class="diygw-grid-title"> 个人消息 </view>
+				</view>
+			</button>
+		</view>
+	</view>
+	<view class="diygw-title flex diygw-col-24 white">
+		<view class="title font-normal"> <text class="diy-icon-rankfill"></text> 考试排名 </view>
+		<view class="more"> </view>
+	</view>
+	<view class="flex flex-wrap diygw-col-24 justify-between items-center flex3-clz">
+		<view class="flex flex-wrap diygw-col-8 flex-direction-column items-center flex7-clz">
+			<view class="diygw-col-0 diygw-text-lg"> {{ranklist.count}}</view>
+			<view class="diygw-col-0 diygw-text-xs"> 答卷 </view>
+		</view>
+		<view class="flex flex-wrap diygw-col-8 flex-direction-column items-center flex9-clz">
+			<view class="diygw-col-0 diygw-text-lg"> {{ranklist.avg}} </view>
+			<view class="diygw-col-0 diygw-text-xs"> 平均分 </view>
+		</view>
+		<view class="flex flex-wrap diygw-col-8 flex-direction-column items-center flex11-clz">
+			<view class="diygw-col-0 diygw-text-lg"> {{ranklist.max}} </view>
+			<view class="diygw-col-0 diygw-text-xs"> 最高分 </view>
+		</view>
+	</view>
+	<view class="flex flex-wrap diygw-col-24 flex-direction-column flex1-clz">
+		<view class="flex flex-wrap diygw-col-24 flex2-clz">
+			<view class="diygw-col-0 orange text1-clz"> 排名 </view>
+			<view class="diygw-col-0 green text2-clz"> 学号 </view>
+			<view class="diygw-col-0 blue text5-clz"> 姓名 </view>
+			<view class="diygw-col-0 pink text7-clz"> 成绩 </view>
+		</view>
+		<view class="flex flex-wrap diygw-col-24 flex4-clz" wx:for="{{examinfolist}}" wx:for-index='index' wx:for-item="examinfolist">
+            <view class="diygw-col-0 text9-clz flex4-clz" wx:if='{{examinfolist.name !== s_username}}'> {{index+1}} </view>
+            <view class="diygw-col-0 text9-clz flex6-clz" wx:if='{{examinfolist.name === s_username}}'> {{index+1}} </view>
+			<view class="diygw-col-0 text11-clz flex6-clz" wx:if='{{examinfolist.name === s_username}}'> {{examinfolist.account}} </view>
+            <view class="diygw-col-0 text11-clz flex4-clz" wx:if='{{examinfolist.name !== s_username}}'> ****** </view>
+			<view class="diygw-col-0 text12-clz flex6-clz" wx:if="{{examinfolist.name === s_username}}"> {{examinfolist.name}} </view>
+            <view class="diygw-col-0 text12-clz flex4-clz" wx:if="{{examinfolist.name !== s_username}}"> ****** </view>
+			<view class="diygw-col-0 text14-clz flex4-clz"  wx:if="{{examinfolist.name !== s_username}}"> {{examinfolist.getgrade}}/{{examinfolist.grade}} </view>
+            <view class="diygw-col-0 text14-clz flex6-clz"  wx:if="{{examinfolist.name === s_username}}"> {{examinfolist.getgrade}}/{{examinfolist.grade}} </view>
+        </view>
+	</view>
+	<view class="clearfix"></view>
+</view>
+

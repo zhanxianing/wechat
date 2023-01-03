@@ -1,0 +1,58 @@
+<view class="container">
+	<view class="flex flex-wrap diygw-col-24 justify-between items-center white flex8-clz">
+		<view class="flex flex-wrap diygw-col-24 flex-direction-column items-center flex2-clz">
+			<view bindtap="goBack" class="diygw-col-0 diygw-text-md"> 返回答题 </view>
+			<view class="diygw-col-0 diygw-text-lg"> </view>
+		</view>
+	</view>
+	<view class="flex flex-wrap diygw-col-24 flex-direction-column flex1-clz">
+		<view class="flex flex-wrap diygw-col-24 justify-between items-center flex4-clz">
+			<view class="diygw-col-0 diygw-text-md"> 答题卡 </view>
+			<view class="diygw-col-0 diygw-text-sm1"> 已作答 </view>
+			<view class="diygw-col-0 diygw-text-sm"> 未作答 </view>
+		</view>
+		<view class="flex diygw-col-24">
+			<view class="diygw-list small not-remark">
+                <view class="diygw-col-24 diygw-text-md" style="margin-top: 20px;">单选题</view>
+				<view class="timu">
+                    <view class="diygw-col-6 diygw-text-md"  wx:for="{{singlearray}}" wx:for-index='index'>
+                    <navigator class="timu_xuhao timu_yida"  wx:if="{{answerlist[index]}}">{{index+1}}</navigator>                  
+                    <navigator class="timu_xuhao" wx:else>{{index+1}}</navigator> 
+                    </view>
+                </view>
+                <view class="diygw-col-24 diygw-text-md" style="margin-top: 20px;">多选题</view>
+				<view class="timu">
+                    <view class="diygw-col-6 diygw-text-md"  wx:for="{{multiplearray}}" wx:for-index='index'>
+                    <navigator class="timu_xuhao timu_yida"  wx:if="{{answerlist[index+exam.single]}}">{{index+1}}</navigator>                  
+                    <navigator class="timu_xuhao" wx:else>{{index+1}}</navigator> 
+                    </view>                
+                </view>      
+                <view class="diygw-col-24 diygw-text-md" style="margin-top: 20px;">判断题</view>
+				<view class="timu">
+                    <view class="diygw-col-6 diygw-text-md"  wx:for="{{judgearray}}" wx:for-index='index'>
+                    <navigator class="timu_xuhao timu_yida"  wx:if="{{answerlist[index+exam.single+exam.multiple+exam.blankfilling]}}">{{index+1}}</navigator>                  
+                    <navigator class="timu_xuhao" wx:else>{{index+1}}</navigator> 
+                    </view>                
+                </view>  
+                <view class="diygw-col-24 diygw-text-md" style="margin-top: 20px;">填空题</view>
+				<view class="timu">
+                    <view class="diygw-col-6 diygw-text-md"  wx:for="{{blankarray}}" wx:for-index='index'>
+                    <navigator class="timu_xuhao timu_yida"  wx:if="{{answerlist[index+exam.single+exam.multiple]}}">{{index+1}}</navigator>                  
+                    <navigator class="timu_xuhao" wx:else>{{index+1}}</navigator> 
+                    </view>                
+                </view>   
+                <view class="diygw-col-24 diygw-text-md" style="margin-top: 20px;">简答题</view>
+				<view class="timu">        
+                    <view class="diygw-col-6 diygw-text-md" wx:for="{{shortarray}}" wx:for-index='index'>
+                    <navigator class="timu_xuhao timu_yida"  wx:if="{{answerlist[index+exam.blankfilling+exam.single+exam.multiple+exam.judge]}}">{{index+1}}</navigator>                  
+                    <navigator class="timu_xuhao" wx:else>{{index+1}}</navigator> 
+                    </view>              
+                </view>                                                   
+			</view>
+		</view>
+	</view>
+	<view class="flex diygw-col-24 justify-center button1-clz">
+		<button class="diygw-btn green radius flex1 margin-md button1-button-clz">返回</button>
+	</view>
+	<view class="clearfix"></view>
+</view>

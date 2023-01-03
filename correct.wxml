@@ -1,0 +1,293 @@
+<view class="container">
+	<view class="flex flex-wrap diygw-col-24 flex-direction-column white flex-clz">
+		<view wx:for="{{correctresult}}" wx:for-item="correctresult" wx:for-index='index'>
+        <view wx:if='{{correctresult.questionid==0}}'>
+        <view class="diygw-form-item diygw-col-24 radio-clz flex-direction-column" style="margin-top: 25px;">
+		<text style="font-size:18px;">单选题：</text>
+			<view class="title title-mb5 width-auto diygw-col-24"> {{index+1}}.{{correctresult.stem}} </view>
+			<view>
+    		<radio-group class="radio-group">
+				<label data-key="index" class="diygw-radio-label">
+            		A.{{correctresult.a}}
+       			 </label>
+					<label data-key="index" class="diygw-radio-label">
+            		B.{{correctresult.b}}
+       			 </label>
+					<label data-key="index" class="diygw-radio-label">
+            		C.{{correctresult.c}}
+       			 </label>
+					<label data-key="index" class="diygw-radio-label" wx:if="{{correctresult.d}}">
+            		D.{{correctresult.d}}
+       			 </label>										
+    		</radio-group>
+			</view>	
+    <view wx:if='{{correctresult.answer!==correctresult.studentanswer}}'>
+		<view class="diygw-form-item diygw-col-24 input1-clz">
+			<view class="title"> 学生答案 </view>
+			<view class="input">
+				<input class="flex1" name="input1" comfirm-type="done" type="text"  data-key="input1" bindchange="changeValue" disabled="true" placeholder="{{correctresult.studentanswer}}" placeholder-style='color:red' />
+			</view>
+		</view>
+		<view class="diygw-form-item diygw-col-24 input-clz">
+			<view class="title"> 正确答案 </view>
+			<view class="input">
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="{{correctresult.answer}}" data-key="input" disabled="true" bindchange="changeValue" placeholder-style='color:red' />
+			</view>
+		</view>
+    </view>
+    <view wx:if='{{correctresult.answer===correctresult.studentanswer}}'>
+		<view class="diygw-form-item diygw-col-24 input1-clz">
+			<view class="title"> 学生答案 </view>
+			<view class="input">
+				<input class="flex1" name="input1" comfirm-type="done" type="text"  data-key="input1" bindchange="changeValue" disabled="true" placeholder="{{correctresult.studentanswer}}" />
+			</view>
+		</view>
+		<view class="diygw-form-item diygw-col-24 input-clz">
+			<view class="title"> 正确答案 </view>
+			<view class="input">
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="{{correctresult.answer}}" data-key="input" disabled="true" bindchange="changeValue"/>
+			</view>
+		</view>
+    </view>
+    <view class="diygw-form-item diygw-col-24 input-clz">
+			<view class="title"> 得分 </view>
+			<view class="input">
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="{{correctresult.getgrade}}/{{correctresult.grade}}" disabled="true" data-key="input" bindchange="changeValue" />
+			</view>
+		</view>     
+		<view class="diygw-form-item diygw-col-24 input-clz">
+			<view class="title"> 所属章节 </view>
+			<view class="input">
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="{{correctresult.subject}}第{{correctresult.chapter}}章" disabled="true" data-key="input" bindchange="changeValue" />
+			</view>
+		</view>       
+		<view class="diygw-form-item diygw-col-24 textarea-clz flex-direction-column noborder">
+			<view class="title diygw-col-24"> 解析 </view>
+			<view class="input">
+				<textarea class="flex1" name="textarea" data-key="textarea" bindchange="changeValue" placeholder="{{correctresult.analysis}}" disabled="true"></textarea>
+			</view>
+		</view>
+	</view>
+    </view>
+    <view wx:if='{{correctresult.questionid==1}}'>
+        <view class="diygw-form-item diygw-col-24 radio-clz flex-direction-column" style="margin-top: 25px;">
+		<text style="font-size:18px;">多选题：</text>
+			<view class="title title-mb5 width-auto diygw-col-24"> {{index+1}}.{{correctresult.stem}} </view>
+			<view>
+    		<radio-group class="radio-group">
+				<label data-key="index" class="diygw-radio-label">
+            		A.{{correctresult.a}}
+       			 </label>
+					<label data-key="index" class="diygw-radio-label">
+            		B.{{correctresult.b}}
+       			 </label>
+					<label data-key="index" class="diygw-radio-label">
+            		C.{{correctresult.c}}
+       			 </label>
+					<label data-key="index" class="diygw-radio-label" wx:if="{{correctresult.d}}">
+            		D.{{correctresult.d}}
+       			 </label>	
+					<label data-key="index" class="diygw-radio-label" wx:if="{{correctresult.e}}">
+            		E.{{correctresult.e}}
+       			 </label>	                   									
+    		</radio-group>
+			</view>	
+    <view wx:if='{{correctresult.answer!==correctresult.studentanswer}}'>
+		<view class="diygw-form-item diygw-col-24 input1-clz">
+			<view class="title"> 学生答案 </view>
+			<view class="input">
+				<input class="flex1" name="input1" comfirm-type="done" type="text"  data-key="input1" bindchange="changeValue" disabled="true" placeholder="{{correctresult.studentanswer}}" placeholder-style='color:red' />
+			</view>
+		</view>
+		<view class="diygw-form-item diygw-col-24 input-clz">
+			<view class="title"> 正确答案 </view>
+			<view class="input">
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="{{correctresult.answer}}" data-key="input" disabled="true" bindchange="changeValue" placeholder-style='color:red' />
+			</view>
+		</view>
+    </view>
+    <view wx:if='{{correctresult.answer===correctresult.studentanswer}}'>
+		<view class="diygw-form-item diygw-col-24 input1-clz">
+			<view class="title"> 学生答案 </view>
+			<view class="input">
+				<input class="flex1" name="input1" comfirm-type="done" type="text"  data-key="input1" bindchange="changeValue" disabled="true" placeholder="{{correctresult.studentanswer}}" />
+			</view>
+		</view>
+		<view class="diygw-form-item diygw-col-24 input-clz">
+			<view class="title"> 正确答案 </view>
+			<view class="input">
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="{{correctresult.answer}}" data-key="input" disabled="true" bindchange="changeValue"/>
+			</view>
+		</view>
+    </view>  
+    <view class="diygw-form-item diygw-col-24 input-clz">
+			<view class="title"> 得分 </view>
+			<view class="input">
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="{{correctresult.getgrade}}/{{correctresult.grade}}" disabled="true" data-key="input" bindchange="changeValue" />
+			</view>
+		</view>    
+		<view class="diygw-form-item diygw-col-24 input-clz">
+			<view class="title"> 所属章节 </view>
+			<view class="input">
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="{{correctresult.subject}}第{{correctresult.chapter}}章" disabled="true" data-key="input" bindchange="changeValue" />
+			</view>
+		</view>       
+		<view class="diygw-form-item diygw-col-24 textarea-clz flex-direction-column noborder">
+			<view class="title diygw-col-24"> 解析 </view>
+			<view class="input">
+				<textarea class="flex1" name="textarea" data-key="textarea" bindchange="changeValue" placeholder="{{correctresult.analysis}}" disabled="true"></textarea>
+			</view>
+		</view>
+        </view>
+    </view>
+<view wx:if='{{correctresult.questionid==3}}'>
+		<view class="diygw-form-item diygw-col-24 radio-clz flex-direction-column" style="margin-top: 25px;">
+			<text style="font-size:18px;">判断题：</text>
+			<view class="title title-mb5 width-auto diygw-col-24"> {{index+1}}.{{correctresult.stem}} </view>
+            <view wx:if='{{correctresult.answer!==correctresult.studentanswer}}'>
+		<view class="diygw-form-item diygw-col-24 input1-clz">
+			<view class="title"> 学生答案 </view>
+			<view class="input">
+				<input class="flex1" name="input1" comfirm-type="done" type="text"  data-key="input1" bindchange="changeValue" disabled="true" placeholder="{{correctresult.studentanswer}}" placeholder-style='color:red' />
+			</view>
+		</view>
+		<view class="diygw-form-item diygw-col-24 input-clz">
+			<view class="title"> 正确答案 </view>
+			<view class="input">
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="{{correctresult.answer}}" data-key="input" disabled="true" bindchange="changeValue" placeholder-style='color:red' />
+			</view>
+		</view>
+    </view>
+    <view wx:if='{{correctresult.answer===correctresult.studentanswer}}'>
+		<view class="diygw-form-item diygw-col-24 input1-clz">
+			<view class="title"> 学生答案 </view>
+			<view class="input">
+				<input class="flex1" name="input1" comfirm-type="done" type="text"  data-key="input1" bindchange="changeValue" disabled="true" placeholder="{{correctresult.studentanswer}}" />
+			</view>
+		</view>
+		<view class="diygw-form-item diygw-col-24 input-clz">
+			<view class="title"> 正确答案 </view>
+			<view class="input">
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="{{correctresult.answer}}" data-key="input" disabled="true" bindchange="changeValue"/>
+			</view>
+		</view>
+    </view>  
+    <view class="diygw-form-item diygw-col-24 input-clz">
+			<view class="title"> 得分 </view>
+			<view class="input">
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="{{correctresult.getgrade}}/{{correctresult.grade}}" disabled="true" data-key="input" bindchange="changeValue" />
+			</view>
+		</view>      
+    <view class="diygw-form-item diygw-col-24 input-clz">
+			<view class="title"> 所属章节 </view>
+			<view class="input">
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="{{correctresult.subject}}第{{correctresult.chapter}}章" disabled="true" data-key="input" bindchange="changeValue" />
+			</view>
+		</view>       
+		<view class="diygw-form-item diygw-col-24 textarea-clz flex-direction-column noborder">
+			<view class="title diygw-col-24"> 解析 </view>
+			<view class="input">
+				<textarea class="flex1" name="textarea" data-key="textarea" bindchange="changeValue" placeholder="{{correctresult.analysis}}" disabled="true"></textarea>
+			</view>
+		</view>   
+	</view>	
+</view>
+<view wx:if='{{correctresult.questionid==2}}'>
+    <view class="diygw-form-item diygw-col-24 radio-clz flex-direction-column" style="margin-top: 25px;">
+			<text style="font-size:18px;">填空题：</text>
+			<view class="title title-mb5 width-auto diygw-col-24"> {{index+1}}.{{correctresult.stem}} </view>
+            <view wx:if='{{correctresult.count>=1}}'>
+                <view class="input solid radius">
+                <view class="diygw-tag radius-xs blue"> 1 </view>
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="{{correctresult.studentanswer1}}" data-key="input" bindchange="changeValue" placeholder="请输入答案" />
+                <text>正确答案:{{correctresult.answer1}}</text>
+                </view>
+                </view>
+                <view wx:if='{{correctresult.count>=2}}'>
+                <view class="input solid radius">
+                <view class="diygw-tag radius-xs blue"> 2 </view>
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="{{correctresult.studentanswer2}}" data-key="input" bindchange="changeValue" placeholder="请输入答案" />
+                <text>正确答案:{{correctresult.answer2}}</text>
+                </view>
+                </view>  
+                <view wx:if='{{correctresult.count>=3}}'>
+                <view class="input solid radius">
+                <view class="diygw-tag radius-xs blue"> 3 </view>
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="{{correctresult.studentanswer3}}" data-key="input" bindchange="changeValue" placeholder="请输入答案" />
+                <text>正确答案:{{correctresult.answer3}}</text>
+                </view>
+                </view>
+                <view wx:if='{{correctresult.count>=4}}'>
+                <view class="input solid radius">
+                <view class="diygw-tag radius-xs blue"> 4 </view>
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="{{correctresult.studentanswer4}}" data-key="input" bindchange="changeValue" placeholder="请输入答案" />
+                <text>正确答案:{{correctresult.answer4}}</text>
+                </view> 
+                </view>
+                <view wx:if='{{correctresult.count>=5}}'>
+                <view class="input solid radius">
+                <view class="diygw-tag radius-xs blue"> 5 </view>
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="{{correctresult.studentanswer5}}" data-key="input" bindchange="changeValue" placeholder="请输入答案" />
+                <text>正确答案:{{correctresult.answer5}}</text>
+                </view>
+                </view>   
+    <view class="diygw-form-item diygw-col-24 input-clz">
+			<view class="title"> 得分 </view>
+			<view class="input">
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="{{correctresult.getgrade}}/{{correctresult.grade}}" disabled="true" data-key="input" bindchange="changeValue" />
+			</view>
+		</view>      
+    <view class="diygw-form-item diygw-col-24 input-clz">
+			<view class="title"> 所属章节 </view>
+			<view class="input">
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="{{correctresult.subject}}第{{correctresult.chapter}}章" disabled="true" data-key="input" bindchange="changeValue" />
+			</view>
+		</view>       
+		<view class="diygw-form-item diygw-col-24 textarea-clz flex-direction-column noborder">
+			<view class="title diygw-col-24"> 解析 </view>
+			<view class="input">
+				<textarea class="flex1" name="textarea" data-key="textarea" bindchange="changeValue" placeholder="{{correctresult.analysis}}" disabled="true"></textarea>
+			</view>
+		</view>   
+	</view>	
+</view>
+<view wx:if='{{correctresult.questionid==4}}'>
+    <view class="diygw-form-item diygw-col-24 radio-clz flex-direction-column" style="margin-top: 25px;">
+            <text style="font-size:18px;">简答题：</text>
+             <view class="title title-mb5 width-auto diygw-col-24"> {{index+1}}.{{correctresult.stem}} </view>
+            <view class="input solid">
+			    <textarea class="flex1" name="textarea" value="{{textarea}}" data-key="textarea" bindchange="changeValue">{{correctresult.studentanswer}}</textarea>
+		    </view>
+    </view>
+    <view class="diygw-form-item diygw-col-24 textarea-clz flex-direction-column noborder">
+			<view class="title diygw-col-24"> 正确答案 </view>
+			<view class="input">
+				<textarea class="flex1" name="input" comfirm-type="done" type="text" data-key="input" disabled="true" placeholder="{{correctresult.answer}}" bindchange="changeValue"></textarea>
+			</view>
+		</view>
+    <view class="diygw-form-item diygw-col-24 input-clz">
+			<view class="title"> 得分 </view>
+			<view class="input">
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="{{correctresult.getgrade}}/{{correctresult.grade}}" disabled="true" data-key="input" bindchange="changeValue" />
+			</view>
+		</view>      
+    <view class="diygw-form-item diygw-col-24 input-clz">
+			<view class="title"> 所属章节 </view>
+			<view class="input">
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="{{correctresult.subject}}第{{correctresult.chapter}}章" disabled="true" data-key="input" bindchange="changeValue" />
+			</view>
+		</view>       
+		<view class="diygw-form-item diygw-col-24 textarea-clz flex-direction-column noborder">
+			<view class="title diygw-col-24"> 解析 </view>
+			<view class="input">
+				<textarea class="flex1" name="textarea" data-key="textarea" bindchange="changeValue" placeholder="{{correctresult.analysis}}" disabled="true"></textarea>
+			</view>
+		</view>  
+</view>
+    </view>
+	</view>   	
+	<view class="flex diygw-col-24 justify-center button1-clz">
+		<button catchtap="navigateTo" data-type="page" data-url="/pages/index" class="diygw-btn green radius flex1 margin-md button1-button-clz">返回主页</button>
+	</view>
+	<view class="clearfix"></view>
+</view>

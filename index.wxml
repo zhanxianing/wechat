@@ -1,0 +1,110 @@
+<view class="container">
+	<view class="flex diygw-col-24">
+		<swiper class="swiper" indicator-color="rgba(51, 51, 51, 0.39)" indicator-active-color="#fff" indicator-dots="true" autoplay interval="3000" circular="true" style="height: 170px">
+			<swiper-item class="diygw-swiper-item">
+				<view class="diygw-swiper-item-wrap">
+					<image src="/static/tuj6nuycapozu0gm16q9.png" class="diygw-swiper-image"></image>
+					<view class="diygw-swiper-item-title"></view>
+				</view>
+			</swiper-item>
+			<swiper-item class="diygw-swiper-item">
+				<view class="diygw-swiper-item-wrap">
+					<image src="/static/_b3ai5h_x01udryr89aq.jpg" class="diygw-swiper-image"></image>
+					<view class="diygw-swiper-item-title"></view>
+				</view>
+			</swiper-item>
+			<swiper-item class="diygw-swiper-item">
+				<view class="diygw-swiper-item-wrap">
+					<image src="/static/txfwx4c9s75oyjsyf0.png" class="diygw-swiper-image"></image>
+					<view class="diygw-swiper-item-title"></view>
+				</view>
+			</swiper-item>
+		</swiper>
+	</view>
+	<view class="flex diygw-col-24">
+		<diy-noticebar class="flex1 diy-notice-bar" color="#07c160" bgColor="#fff" leftIcon="diy-icon-notification">
+			<view slot="content">
+				<text class="diy-notice-item"> 同学们，注意考试时间！ </text>
+			</view>
+		</diy-noticebar>
+	</view>
+	<view class="flex diygw-col-24">
+		<view class="diygw-grid col-3">
+			<view bindtap="checktest" class="diygw-grid-item">
+				<view class="diygw-grid-inner grid-item-clz">
+					<view class="diygw-grid-icon diygw-avatar radius">
+						<image mode="aspectFit" class="diygw-avatar-img" src="/static/cjcx.png"></image>
+					</view>
+					<view class="diygw-grid-title1"> 成绩查询 </view>
+				</view>
+			</view>
+			<view bindtap="checkexam" class="diygw-grid-item">
+				<view class="diygw-grid-inner grid-item-clz">
+					<view class="diygw-grid-icon diygw-avatar radius">
+						<image mode="aspectFit" class="diygw-avatar-img" src="/static/kszd.png"></image>
+					</view>
+					<view class="diygw-grid-title1"> 考试查询 </view>
+				</view>
+			</view>
+			<view bindtap="checkerror" class="diygw-grid-item">
+				<view class="diygw-grid-inner grid-item-clz">
+					<view class="diygw-grid-icon diygw-avatar radius">
+						<image mode="aspectFit" class="diygw-avatar-img" src="/static/ctk.png"></image>
+					</view>
+					<view class="diygw-grid-title1"> 错题查询 </view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="flex diygw-col-24">
+		<view class="diygw-pzx" style="border-bottom: 1px solid #eee"></view>
+	</view>
+	<view catchtap="navigateTo" data-type="page" data-url="/pages/checktest" class="diygw-title flex diygw-col-24 solid-bottom">
+		<view class="title font-bold"> <text class="diy-icon-writefill"></text> 当前考试 </view>
+		<view class="more">
+			更多
+			<text class="diy-icon-right"></text>
+		</view>
+	</view>
+	<view class="flex flex-wrap diygw-col-24 flex11-clz"  wx:for="{{examlist}}" wx:for-item="examlist" wx:if="{{examlist.temp==1}}">
+		<image src="/static/lwg0qgq_u37p9ycmpp.png" class="diygw-image diygw-col-0 image1-clz" style="height: 80px; width: 80px" mode="aspectFit"></image>
+		<view class="flex flex-wrap diygw-col-0 flex-direction-column flex1-clz">
+			<view class="flex flex-wrap diygw-col-24 flex-direction-column justify-between flex3-clz">
+				<view class="diygw-col-24 diygw-text-md"> {{examlist.name}} </view>
+			</view>
+			<view class="flex flex-wrap diygw-col-24 justify-start items-center flex5-clz">
+				<view class="diygw-col-10"> {{examlist.single*examlist.singlegrade+examlist.multiple*examlist.multiplegrade+examlist.blankfilling*examlist.blankfillinggrade+examlist.judge*examlist.judgegrade+examlist.shortquestion*examlist.shortquestiongrade}} 分 </view>
+				<view class="flex diygw-col-11 flex-direction-column button1-clz">
+					<button style="color: rgba(251, 247, 247, 1) !important"  data-e_id="{{examlist.id}}" data-e_method="{{examlist.method}}"   data-type="page" bindtap="test" class="diygw-btn blue flex1 margin-xs button1-button-clz">点击开始测验</button>
+				</view>
+			</view>
+			<view class="flex flex-wrap diygw-col-24 flex7-clz">
+				<view class="diygw-col-0 text7-clz"> {{examlist.time}}分钟 </view>
+				<view class="diygw-col-0 text9-clz"> 可测验 </view>
+				<view class="diygw-col-0 text11-clz"> {{examlist.endtime}}截止 </view>
+			</view>
+		</view>
+	</view>
+
+	<view class="flex diygw-col-24 diygw-bottom">
+		<view class="diygw-grid diygw-actions">
+			<button catchtap="navigateTo" data-type="page" data-url="/pages/index" class="diygw-action">
+				<view class="diygw-grid-inner">
+					<view class="diygw-grid-icon diygw-avatar">
+						<image mode="aspectFit" class="diygw-avatar-img" src="/static/sy-blue.png"></image>
+					</view>
+					<view class="diygw-grid-title"> 首页 </view>
+				</view>
+			</button>
+			<button catchtap="navigateTo" data-type="page" data-url="/pages/personalinformation" class="diygw-action">
+				<view class="diygw-grid-inner">
+					<view class="diygw-grid-icon diygw-avatar">
+						<image mode="aspectFit" class="diygw-avatar-img" src="/static/grxx_o.png"></image>
+					</view>
+					<view class="diygw-grid-title"> 个人消息 </view>
+				</view>
+			</button>
+		</view>
+	</view>
+	<view class="clearfix"></view>
+</view>

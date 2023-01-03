@@ -1,0 +1,272 @@
+<view class="flex flex-wrap diygw-col-24 justify-between items-center white flex8-clz">
+		<view class="flex flex-wrap diygw-col-24 flex-direction-column items-center flex2-clz">
+			<view bindtap="goBack" class="diygw-col-0 diygw-text-md"> 返回错题卡 </view>
+			<view class="diygw-col-0 diygw-text-lg"> </view>
+		</view>
+	</view>
+<view wx:if='{{errorquestions[id].questionid==0}}'>
+	<view class="flex flex-wrap diygw-col-24 flex-direction-column flex-clz">
+		<view class="diygw-form-item diygw-col-24 white radio1-clz flex-direction-column">
+			<view class="title title-mb5 width-auto diygw-col-24"> {{id+1}}.{{errorquestions[id].stem}} </view>
+			<view class="input">
+				<label data-key="index" class="diygw-radio-label">
+            		A.{{errorquestions[id].a}}
+       			 </label>									     
+			</view>
+            <view class="input">
+            <label data-key="index" class="diygw-radio-label">
+            		B.{{errorquestions[id].b}}
+       	    </label>
+            </view>
+            <view class="input">
+				<label data-key="index" class="diygw-radio-label">
+            		C.{{errorquestions[id].c}}
+       			</label>
+            </view>
+            <view class="input">
+					<label data-key="index" class="diygw-radio-label">
+            		D.{{errorquestions[id].d}}
+       			 </label>
+            </view>        	
+		</view>
+	</view>
+	<view class="flex flex-wrap diygw-col-24 flex-direction-column flex1-clz">
+		<view class="diygw-form-item diygw-col-24 input1-clz">
+			<view class="title"> 学生答案 </view>
+			<view class="input">
+				<input class="flex1" name="input1" comfirm-type="done" type="text"  data-key="input1" bindchange="changeValue" disabled="true" placeholder="{{errorquestions[id].studentanswer}}" />
+			</view>
+		</view>
+		<view class="diygw-form-item diygw-col-24 input-clz">
+			<view class="title"> 正确答案 </view>
+			<view class="input">
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="{{errorquestions[id].answer}}" data-key="input" disabled="true" bindchange="changeValue" />
+			</view>
+		</view>
+		<view class="diygw-form-item diygw-col-24 input-clz">
+			<view class="title"> 所属章节 </view>
+			<view class="input">
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="{{errorquestions[id].subject}}第{{errorquestions[id].chapter}}章" disabled="true" data-key="input" bindchange="changeValue" />
+			</view>
+		</view>
+		<view class="diygw-form-item diygw-col-24 input-clz" wx:if="{{errorquestions[id].errorcount>0}}">
+			<view class="title" style="color:red;"> 提示 </view>
+			<view class="input">
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="该题已经错误{{errorquestions[id].errorcount+1}}次" disabled="true" data-key="input" bindchange="changeValue" />
+			</view>
+		</view>                
+		<view class="diygw-form-item diygw-col-24 textarea-clz flex-direction-column noborder">
+			<view class="title diygw-col-24"> 解析 </view>
+			<view class="input">
+				<textarea class="flex1" name="textarea" data-key="textarea" bindchange="changeValue" placeholder="{{errorquestions[id].analysis}}" disabled="true"></textarea>
+			</view>
+		</view>
+	</view>
+</view> 
+    <view wx:if='{{errorquestions[id].questionid==1}}'>
+	<view class="flex flex-wrap diygw-col-24 flex-direction-column flex-clz">
+		<view class="diygw-form-item diygw-col-24 white radio1-clz flex-direction-column">
+			<view class="title title-mb5 width-auto diygw-col-24"> {{id+1}}.{{errorquestions[id].stem}} </view>
+			<view class="input">
+				<label data-key="index" class="diygw-radio-label">
+            		A.{{errorquestions[id].a}}
+       			 </label>									     
+			</view>
+            <view class="input">
+            <label data-key="index" class="diygw-radio-label">
+            		B.{{errorquestions[id].b}}
+       	    </label>
+            </view>
+            <view class="input">
+				<label data-key="index" class="diygw-radio-label">
+            		C.{{errorquestions[id].c}}
+       			</label>
+            </view>
+            <view class="input" wx:if="{{errorquestions[id].d}}">
+					<label data-key="index" class="diygw-radio-label">
+            		D.{{errorquestions[id].d}}
+       			 </label>
+            </view> 
+            <view class="input" wx:if="{{errorquestions[id].e}}">
+					<label data-key="index" class="diygw-radio-label">
+            		E.{{errorquestions[id].e}}
+       			 </label>
+            </view> 
+	</view>
+	<view class="flex flex-wrap diygw-col-24 flex-direction-column flex1-clz">
+		<view class="diygw-form-item diygw-col-24 input1-clz">
+			<view class="title"> 学生答案 </view>
+			<view class="input">
+				<input class="flex1" name="input1" comfirm-type="done" type="text"  data-key="input1" bindchange="changeValue" disabled="true" placeholder="{{errorquestions[id].studentanswer}}" />
+			</view>
+		</view>
+		<view class="diygw-form-item diygw-col-24 input-clz">
+			<view class="title"> 正确答案 </view>
+            <view class="input">
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="{{errorquestions[id].answer}}" data-key="input" disabled="true" bindchange="changeValue" />
+			</view>
+		</view>
+		<view class="diygw-form-item diygw-col-24 input-clz">
+			<view class="title"> 所属章节 </view>
+			<view class="input">
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="{{errorquestions[id].subject}}第{{errorquestions[id].chapter}}章" disabled="true" data-key="input" bindchange="changeValue" />
+			</view>
+		</view>  
+		<view class="diygw-form-item diygw-col-24 input-clz" wx:if="{{errorquestions[id].errorcount>0}}">
+			<view class="title" style="color:red;"> 提示 </view>
+			<view class="input">
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="该题已经错误{{errorquestions[id].errorcount+1}}次" disabled="true" data-key="input" bindchange="changeValue" />
+			</view>
+		</view>              
+		<view class="diygw-form-item diygw-col-24 textarea-clz flex-direction-column noborder">
+			<view class="title diygw-col-24"> 解析 </view>
+			<view class="input">
+				<textarea class="flex1" name="textarea" data-key="textarea" bindchange="changeValue" placeholder="{{errorquestions[id].analysis}}" disabled="true"></textarea>
+			</view>
+		</view>
+	</view>
+</view>
+</view>   
+    <view wx:if='{{errorquestions[id].questionid==2}}'>
+        <view class="flex flex-wrap diygw-col-24 flex-direction-column flex-clz">
+		    <view class="diygw-form-item diygw-col-24 white radio1-clz flex-direction-column">
+			    <view class="title title-mb5 width-auto diygw-col-24"> {{id+1}}.{{errorquestions[id].stem}} </view>
+                <view wx:if='{{errorquestions[id].count>=1}}'>
+                <view class="input solid radius">
+                <view class="diygw-tag radius-xs blue"> 1 </view>
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="{{errorquestions[id].studentanswer1}}" data-key="input" bindchange="changeValue" placeholder="请输入答案" />
+                <text>正确答案:{{errorquestions[id].answer1}}</text>
+                </view>
+                </view>
+                <view wx:if='{{errorquestions[id].count>=2}}'>
+                <view class="input solid radius">
+                <view class="diygw-tag radius-xs blue"> 2 </view>
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="{{errorquestions[id].studentanswer2}}" data-key="input" bindchange="changeValue" placeholder="请输入答案" />
+                <text>正确答案:{{errorquestions[id].answer2}}</text>
+                </view>
+                </view>  
+                <view wx:if='{{errorquestions[id].count>=3}}'>
+                <view class="input solid radius">
+                <view class="diygw-tag radius-xs blue"> 3 </view>
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="{{errorquestions[id].studentanswer3}}" data-key="input" bindchange="changeValue" placeholder="请输入答案" />
+                <text>正确答案:{{errorquestions[id].answer3}}</text>
+                </view>
+                </view>
+                <view wx:if='{{errorquestions[id].count>=4}}'>
+                <view class="input solid radius">
+                <view class="diygw-tag radius-xs blue"> 4 </view>
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="{{errorquestions[id].studentanswer4}}" data-key="input" bindchange="changeValue" placeholder="请输入答案" />
+                <text>正确答案:{{errorquestions[id].answer4}}</text>
+                </view> 
+                </view>
+                <view wx:if='{{errorquestions[id].count>=5}}'>
+                <view class="input solid radius">
+                <view class="diygw-tag radius-xs blue"> 5 </view>
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="{{errorquestions[id].studentanswer5}}" data-key="input" bindchange="changeValue" placeholder="请输入答案" />
+                <text>正确答案:{{errorquestions[id].answer5}}</text>
+                </view>
+                </view>               
+            </view>
+        </view>
+        <view class="flex flex-wrap diygw-col-24 flex-direction-column flex1-clz">
+		<view class="diygw-form-item diygw-col-24 input-clz">
+			<view class="title"> 所属章节 </view>
+			<view class="input">
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="{{errorquestions[id].subject}}第{{errorquestions[id].chapter}}章" disabled="true" data-key="input" bindchange="changeValue" />
+			</view>
+		</view> 
+        <view class="diygw-form-item diygw-col-24 input-clz" wx:if="{{errorquestions[id].errorcount>0}}">
+			<view class="title" style="color:red;"> 提示 </view>
+			<view class="input">
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="该题已经错误{{errorquestions[id].errorcount+1}}次" disabled="true" data-key="input" bindchange="changeValue" />
+			</view>
+		</view>       
+		<view class="diygw-form-item diygw-col-24 textarea-clz flex-direction-column noborder">
+			<view class="title diygw-col-24"> 解析 </view>
+			<view class="input">
+				<textarea class="flex1" name="textarea" data-key="textarea" bindchange="changeValue" placeholder="{{errorquestions[id].analysis}}" disabled="true"></textarea>
+			</view>
+		</view>
+	</view>   
+    </view>
+
+        <view wx:if='{{errorquestions[id].questionid==3}}'>
+            <view class="flex flex-wrap diygw-col-24 flex-direction-column flex-clz">
+		    <view class="diygw-form-item diygw-col-24 white radio1-clz flex-direction-column">       
+            <view class="title title-mb5 width-auto diygw-col-24"> {{id+1}}.{{errorquestions[id].stem}} </view>
+            </view>
+            </view>
+            <view class="flex flex-wrap diygw-col-24 flex-direction-column flex1-clz">
+		<view class="diygw-form-item diygw-col-24 input1-clz">
+			<view class="title"> 学生答案 </view>
+			<view class="input">
+				<input class="flex1" name="input1" comfirm-type="done" type="text"  data-key="input1" bindchange="changeValue" disabled="true" placeholder="{{errorquestions[id].studentanswer}}" />
+			</view>
+		</view>
+		<view class="diygw-form-item diygw-col-24 input-clz">
+			<view class="title"> 正确答案 </view>
+			<view class="input">
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="{{errorquestions[id].answer}}" data-key="input" disabled="true" bindchange="changeValue" />
+			</view>
+		</view>
+		<view class="diygw-form-item diygw-col-24 input-clz">
+			<view class="title"> 所属章节 </view>
+			<view class="input">
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="{{errorquestions[id].subject}}第{{errorquestions[id].chapter}}章" disabled="true" data-key="input" bindchange="changeValue" />
+			</view>
+		</view>    
+		<view class="diygw-form-item diygw-col-24 input-clz" wx:if="{{errorquestions[id].errorcount>0}}">
+			<view class="title" style="color:red;"> 提示 </view>
+			<view class="input">
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="该题已经错误{{errorquestions[id].errorcount+1}}次" disabled="true" data-key="input" bindchange="changeValue" />
+			</view>
+		</view>            
+		<view class="diygw-form-item diygw-col-24 textarea-clz flex-direction-column noborder">
+			<view class="title diygw-col-24"> 解析 </view>
+			<view class="input">
+				<textarea class="flex1" name="textarea" data-key="textarea" bindchange="changeValue" placeholder="{{errorquestions[id].analysis}}" disabled="true"></textarea>
+			</view>
+		</view>
+	</view>
+        </view>
+
+        <view wx:if='{{errorquestions[id].questionid==4}}'>
+            <view class="flex flex-wrap diygw-col-24 flex-direction-column flex-clz">
+		    <view class="diygw-form-item diygw-col-24 white radio1-clz flex-direction-column">       
+            <view class="title title-mb5 width-auto diygw-col-24"> {{id+1}}.{{errorquestions[id].stem}} </view>
+            <view class="input solid">
+			    <textarea class="flex1" name="textarea" value="{{textarea}}" data-key="textarea" bindchange="changeValue">{{errorquestions[id].studentanswer}}</textarea>
+		    </view>
+        </view>
+            </view>            
+            <view class="flex flex-wrap diygw-col-24 flex-direction-column flex1-clz">
+		<view class="diygw-form-item diygw-col-24 input-clz">
+			<view class="title"> 正确答案 </view>
+			<view class="input">
+				<textarea class="flex1" name="textarea" data-key="textarea" bindchange="changeValue" placeholder="{{errorquestions[id].answer}}" disabled="true"></textarea>
+			</view>			
+		</view>
+		<view class="diygw-form-item diygw-col-24 input-clz">
+			<view class="title"> 所属章节 </view>
+			<view class="input">
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="{{errorquestions[id].subject}}第{{errorquestions[id].chapter}}章" disabled="true" data-key="input" bindchange="changeValue" />
+			</view>
+		</view>      
+		<view class="diygw-form-item diygw-col-24 input-clz" wx:if="{{errorquestions[id].errorcount>0}}">
+			<view class="title" style="color:red;"> 提示 </view>
+			<view class="input">
+				<input class="flex1" name="input" comfirm-type="done" type="text" value="该题已经错误{{errorquestions[id].errorcount+1}}次" disabled="true" data-key="input" bindchange="changeValue" />
+			</view>
+		</view>         
+		<view class="diygw-form-item diygw-col-24 textarea-clz flex-direction-column noborder">
+			<view class="title diygw-col-24"> 解析 </view>
+			<view class="input">
+				<textarea class="flex1" name="textarea" data-key="textarea" bindchange="changeValue" placeholder="{{errorquestions[id].analysis}}" disabled="true"></textarea>
+			</view>
+		</view>
+	</view>            
+</view>
+<view class="flex diygw-col-24 button2-clz">
+    <button type="default" class="diygw-btn green flex1 margin-xs button2-button-clz" bindtap="lastQuestion">上一题</button>
+    <button type="default" class="diygw-btn green flex1 margin-xs button2-button-clz" bindtap="nextQuestion">下一题</button>
+</view>

@@ -1,0 +1,137 @@
+<view class="container">
+	<view class="flex flex-wrap diygw-col-24 justify-between items-center white flex8-clz diygw-top">
+		<!--<view class="flex flex-wrap diygw-col-12 flex-direction-column items-center flex3-clz">
+			<view wx:for="{{listData}}" wx:key="idx" wx:for-item="item" wx:for-index="{{idx}}" class="diygw-col-0 diygw-text-md">倒计时 36：33</view>
+			<view class="diygw-col-0 diygw-text-lg"> </view>
+		</view>-->
+		<view class="flex flex-wrap diygw-col-12 flex-direction-column items-center flex3-clz">
+			<view wx:for="{{listData}}" wx:key="idx" wx:for-item="item" wx:for-index="{{idx}}"  class="diygw-col-0 diygw-text-md"> 倒计时 {{item.countDown}} </view>
+			<view class="diygw-col-0 diygw-text-lg"> </view>
+		</view>        
+		<view class="flex flex-wrap diygw-col-12 flex-direction-column items-center flex3-clz">
+			<view data-type="page" bindtap="answer" class="diygw-col-0 diygw-text-md"> 答题卡 </view>
+			<view class="diygw-col-0 diygw-text-lg"> </view>
+		</view>
+	</view>
+	
+	<view class="flex flex-wrap diygw-col-24 flex-direction-column white flex-clz" wx:for="{{examlist1}}" wx:for-item="examlist1" wx:for-index='index'>
+		<view class="diygw-form-item diygw-col-24 radio-clz flex-direction-column" style="margin-top: 25px;">
+		<text style="font-size:18px;">单选题：</text>
+			<view class="title title-mb5 width-auto diygw-col-24"> {{index+1}}.{{examlist1.stem}} </view>
+			<view>
+    		<radio-group class="radio-group" bindchange="radioChange" data-exam="{{exam.id}}" data-index="{{index}}"  data-account="{{account}}" data-question="0" data-questionid="{{examlist1.id}}">
+				<label data-key="index" class="diygw-radio-label">
+            		<radio value="A" />A.{{examlist1.a}}
+       			 </label>
+					<label data-key="index" class="diygw-radio-label">
+            		<radio value="B" />B.{{examlist1.b}}
+       			 </label>
+					<label data-key="index" class="diygw-radio-label">
+            		<radio value="C" />C.{{examlist1.c}}
+       			 </label>
+					<label data-key="index" class="diygw-radio-label">
+            		<radio value="D" />D.{{examlist1.d}}
+       			 </label>										
+    		</radio-group>        
+			<input hidden type="hidden" name="radioLabel" value="{{radioLabel}}" data-index="{{index}}"/>
+			</view>		
+		</view>
+	</view>
+	<view class="flex flex-wrap diygw-col-24 flex-direction-column white flex-clz" wx:for="{{examlist2}}" wx:for-item="examlist2" wx:for-index='index'>
+		<view class="diygw-form-item diygw-col-24 radio-clz flex-direction-column" style="margin-top: 25px;">
+			<text style="font-size:18px;">多选题：</text>
+			<view class="title title-mb5 width-auto diygw-col-24"> {{index+1}}.{{examlist2.stem}} </view>
+			<view>
+				<checkbox-group class="checkbox-group" bindchange="Checkboxchange" data-exam="{{exam.id}}" data-index="{{index}}"  data-account="{{account}}" data-question="1" data-questionid="{{examlist2.id}}" name="checkbox">
+					<label data-key="index" class="diygw-checkbox-label">
+						<checkbox value="A"> </checkbox>
+					   {{examlist2.a}} 
+					</label>
+					<label data-key="index" class="diygw-checkbox-label">
+						<checkbox value="B"> </checkbox>
+						{{examlist2.b}} 
+					</label>
+					<label data-key="index" class="diygw-checkbox-label">
+						<checkbox  value="C"> </checkbox>
+					 {{examlist2.c}} 
+					</label>
+					<label data-key="index" class="diygw-checkbox-label" wx:if="{{examlist2.d}}">
+						<checkbox  value="D"> </checkbox>
+						{{examlist2.d}}
+					</label>
+					<label data-key="index" class="diygw-checkbox-label" wx:if="{{examlist2.e}}">
+						<checkbox value="E"> </checkbox>
+						{{examlist2.e}} 
+					</label>																				
+				</checkbox-group>
+		</view>
+	</view>	
+</view>	
+	<view class="flex flex-wrap diygw-col-24 flex-direction-column white flex-clz" wx:for="{{examlist3}}" wx:for-item="examlist3" wx:for-index='index'>
+		<view class="diygw-form-item diygw-col-24 radio-clz flex-direction-column" style="margin-top: 25px;">
+			<text style="font-size:18px;">判断题：</text>
+			<view class="title title-mb5 width-auto diygw-col-24"> {{index+1}}.{{examlist3.stem}} </view>
+			<view>
+    		<radio-group class="radio-group" bindchange="radioChange1" data-exam="{{exam.id}}" data-index="{{index}}"  data-account="{{account}}" data-question="3" data-questionid="{{examlist3.id}}">
+				<label data-key="index" class="diygw-radio-label">
+            		<radio value="对" />对
+       			 </label>
+				<label data-key="index" class="diygw-radio-label">
+            		<radio value="错" />错
+       			 </label>													
+    		</radio-group>
+			<input hidden type="hidden" name="radioLabel" value="{{radioLabel}}" />
+			</view>		
+		</view>
+	</view>	
+	<view class="flex flex-wrap diygw-col-24 flex-direction-column white flex-clz" wx:for="{{examlist4}}" wx:for-item="examlist4" wx:for-index='index'>
+		<view class="diygw-form-item diygw-col-24 radio-clz flex-direction-column" style="margin-top: 25px;">
+			<text style="font-size:18px;">填空题：</text>
+			<view class="title title-mb5 width-auto diygw-col-24"> {{index+1}}.{{examlist4.stem}} </view>
+			<view wx:if="{{examlist4.count>=1}}">
+                <view class="input solid radius">
+                    <view class="diygw-tag radius-xs blue"> 1 </view>
+				    <input class="flex1" name="input" type="text" bindinput="changeValue01" data-count="1" data-questioncount="{{examlist4.count}}" data-exam="{{exam.id}}" data-index="{{index}}"  data-account="{{account}}" data-question="2" data-questionid="{{examlist4.id}}" placeholder="请输入答案" />
+			    </view>
+            </view>
+            
+			<view wx:if="{{examlist4.count>=2}}">
+                <view class="input solid radius">
+                    <view class="diygw-tag radius-xs blue"> 2 </view>
+				    <input class="flex1" name="input" type="text" bindinput="changeValue02" data-count="2" data-questioncount="{{examlist4.count}}" data-exam="{{exam.id}}" data-index="{{index}}"  data-account="{{account}}" data-question="2" data-questionid="{{examlist4.id}}"  placeholder="请输入答案" />
+			    </view>
+            </view> 
+			<view wx:if="{{examlist4.count>=3}}">
+                <view class="input solid radius">
+                    <view class="diygw-tag radius-xs blue"> 3 </view>
+				    <input class="flex1" name="input" type="text" bindinput="changeValue03" data-count="3" data-questioncount="{{examlist4.count}}" data-exam="{{exam.id}}" data-index="{{index}}"  data-account="{{account}}" data-question="2" data-questionid="{{examlist4.id}}" placeholder="请输入答案" />
+			    </view>
+            </view>
+			<view wx:if="{{examlist4.count>=4}}">
+                <view class="input solid radius">
+                    <view class="diygw-tag radius-xs blue"> 4 </view>
+				    <input class="flex1" name="input"  type="text" bindinput="changeValue04" data-count="4" data-questioncount="{{examlist4.count}}" data-exam="{{exam.id}}" data-index="{{index}}"  data-account="{{account}}" data-question="2" data-questionid="{{examlist4.id}}" placeholder="请输入答案" />
+			    </view>
+            </view>
+			<view wx:if="{{examlist4.count>=5}}">
+                <view class="input solid radius">
+                    <view class="diygw-tag radius-xs blue"> 5 </view>
+				    <input class="flex1" name="input" type="text" bindinput="changeValue05" data-count="5" data-questioncount="{{examlist4.count}}" data-exam="{{exam.id}}" data-index="{{index}}"  data-account="{{account}}" data-question="2" data-questionid="{{examlist4.id}}" placeholder="请输入答案" />
+			    </view>
+            </view>                                     
+		</view>
+	</view>	
+    <view class="flex flex-wrap diygw-form-item diygw-col-24 white textarea-clz flex-direction-column noborder"  wx:for="{{examlist5}}" wx:for-item="examlist5" wx:for-index='index'>
+		<view class="diygw-form-item diygw-col-24 radio-clz flex-direction-column" style="margin-top: 25px;">
+            <text style="font-size:18px;">简答题：</text>
+             <view class="title title-mb5 width-auto diygw-col-24"> {{index+1}}.{{examlist5.stem}} </view>
+            <view class="input solid">
+			    <textarea class="flex1" name="textarea" data-key="textarea" bindinput="changeValue1" data-exam="{{exam.id}}" data-index="{{index}}"  data-account="{{account}}" data-question="4" data-questionid="{{examlist5.id}}" placeholder="请输入答案"></textarea>
+		    </view>
+        </view>
+	</view>	    	
+	<view class="flex diygw-col-24 justify-center button1-clz">
+		<button bindtap="submitit" class="diygw-btn green radius flex1 margin-md button1-button-clz">提交</button>
+	</view>
+	<view class="clearfix"></view>
+</view>

@@ -1,0 +1,7 @@
+{
+	"navigationBarTitleText": "首页",
+	"navigationBarBackgroundColor": "#23BEB9",
+	"usingComponents": {
+		"diy-noticebar": "/components/diy-noticebar/diy-noticebar"
+	}
+}

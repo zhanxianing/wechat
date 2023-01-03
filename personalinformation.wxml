@@ -1,0 +1,102 @@
+<view class="container">
+	<view class="flex flex-wrap diygw-col-24 flex-direction-column flex9-clz">
+		<view class="flex flex-wrap diygw-col-24 flex-direction-column justify-center items-center flex-clz">
+			<view class="flex diygw-col-0 avatar1-clz">
+				<view class="diygw-avatar lg white radius">
+					<image mode="aspectFit" class="diygw-avatar-img radius" src="/static/tx-nxs4.png"></image>
+					<view class="diygw-tag badge avatar1-badge-0 diy-icon-male gradual-red"></view>
+				</view>
+			</view>
+			<view class="diygw-col-0 text1-clz diygw-text-md text-white">{{s_username}}</view>
+		</view>
+	</view>
+	<view class="flex flex-wrap diygw-col-24 justify-between items-center white flex8-clz">
+		<view class="flex flex-wrap diygw-col-12 flex-direction-column items-center flex1-clz">
+			<view class="diygw-col-0 diygw-text-lg"> 3 </view>
+			<view class="diygw-col-0 diygw-text-xs"> 当前考试 </view>
+		</view>
+		<view class="flex flex-wrap diygw-col-12 flex-direction-column items-center flex2-clz">
+			<view class="diygw-col-0 diygw-text-lg"> 5 </view>
+			<view class="diygw-col-0 diygw-text-xs"> 历史考试 </view>
+		</view>
+	</view>
+	<view class="flex diygw-col-24 grid-clz">
+		<view class="diygw-grid col-2">
+			<view catchtap="navigateTo" data-type="page" data-url="/pages/modifypassword" class="diygw-grid-item">
+				<view class="diygw-grid-inner">
+					<view class="diygw-grid-icon diygw-avatar radius">
+						<image mode="aspectFit" class="diygw-avatar-img radius" src="/static/icon10_xw.png"></image>
+					</view>
+					<view class="diygw-grid-title"> 修改密码 </view>
+				</view>
+			</view>
+			<view catchtap="navigateTo" data-type="page" data-url="/pages/modify" class="diygw-grid-item">
+				<view class="diygw-grid-inner">
+					<view class="diygw-grid-icon diygw-avatar radius">
+						<image mode="aspectFit" class="diygw-avatar-img radius" src="/static/icon10_tp.png"></image>
+					</view>
+					<view class="diygw-grid-title"> 修改信息 </view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="diygw-title flex diygw-col-24 white">
+		<view class="title title-title font-normal"> <text class="title-icon diy-icon-home"></text> 个人信息 </view>
+		<view class="more title-more"> </view>
+	</view>
+	<view class="flex diygw-col-24 flex-wrap white flex3-clz">
+		<view class="flex flex-wrap diygw-col-12 items-center flex5-clz">
+			<view class="diygw-col-0 text6-clz"> 姓名： </view>
+			<view class="diygw-col-0 text8-clz"> {{s_username}} </view>
+		</view>
+		<view class="flex diygw-col-12 items-center flex-nowrap flex7-clz">
+			<view class="diygw-col-0 text9-clz"> 学号： </view>
+			<view class="diygw-col-0 text11-clz"> {{s_account}} </view>
+		</view>
+		<view class="flex flex-wrap diygw-col-12 items-center flex11-clz">
+			<view class="diygw-col-0 text14-clz"> 民族： </view>
+			<view class="diygw-col-0 text16-clz"> 汉 </view>
+		</view>
+		<view class="flex flex-wrap diygw-col-12 items-center flex13-clz">
+			<view class="diygw-col-0 text18-clz"> 性别： </view>
+			<view class="diygw-col-0 text20-clz">{{s_sex}} </view>
+		</view>
+		<view class="flex flex-wrap diygw-col-12 items-center flex15-clz">
+			<view class="diygw-col-0 text22-clz"> 学历： </view>
+			<view class="diygw-col-0 text24-clz text-red"> {{s_background}} </view>
+		</view>
+		<view class="flex flex-wrap diygw-col-12 items-center flex17-clz">
+			<view class="diygw-col-0 text26-clz"> 班级： </view>
+			<view class="diygw-col-0 text28-clz text-red"> {{s_class1}} </view>
+		</view>
+		<view class="flex flex-wrap diygw-col-24 items-center flex19-clz">
+			<view class="diygw-col-0 text30-clz"> 联系电话： </view>
+			<view class="diygw-col-0 text32-clz"> {{s_telephone}}</view>
+		</view>
+		<view class="flex flex-wrap diygw-col-24 items-center flex21-clz">
+			<view class="diygw-col-0 text34-clz"> 通信地址： </view>
+			<view class="diygw-col-0 text36-clz"> {{s_location}} </view>
+		</view>
+	</view>
+	<view class="flex diygw-col-24 diygw-bottom">
+		<view class="diygw-grid diygw-actions">
+			<button catchtap="navigateTo" data-type="page" data-url="/pages/index" class="diygw-action">
+				<view class="diygw-grid-inner">
+					<view class="diygw-grid-icon diygw-avatar">
+						<image mode="aspectFit" class="diygw-avatar-img" src="/static/sy-blue.png"></image>
+					</view>
+					<view class="diygw-grid-title"> 首页 </view>
+				</view>
+			</button>
+			<button catchtap="navigateTo" data-type="page" data-url="/pages/personalinformation" class="diygw-action">
+				<view class="diygw-grid-inner">
+					<view class="diygw-grid-icon diygw-avatar">
+						<image mode="aspectFit" class="diygw-avatar-img" src="/static/grxx_o.png"></image>
+					</view>
+					<view class="diygw-grid-title"> 个人消息 </view>
+				</view>
+			</button>
+		</view>
+	</view>
+	<view class="clearfix"></view>
+</view>
